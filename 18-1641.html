@@ -1,0 +1,531 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head id="ctl00_Head1"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"2fdd6b8d1a","applicationID":"50175531","transactionName":"YwdbYEZTVxYHABALW1pNeGdkHVUAAQoXDlVAC1ZaUFdNBA8PSgNHRBo=","queueTime":0,"applicationTime":436,"agent":"","atts":"T0BYFg5JGwsUTRAQXUQrXRYOEAhdIltSUgAEJngMAnEOUiRBGR8="}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"2fdd6b8d1a",applicationID:"50175531"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script><link href="CalendarControl.css" rel="stylesheet" type="text/css" /><link href="Skins/Tacoma/TabStrip.Tacoma.css" rel="Stylesheet" type="text/css" /><title>
+	City of Oakland - File #: 18-1641
+</title>
+    
+    <script type="text/javascript" src="./Scripts/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="CalendarControl.js" language="javascript"></script>
+    <script type="text/javascript">
+        var addthis_config = {
+            ui_cobrand: "powered by Legistar",
+            ui_header_color: "#660000",
+            ui_header_background: "#f7eecd",
+            ui_508_compliant: true,
+            data_track_clickback: true
+        }
+    </script>
+    <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#username=legistarinsite" async="async"></script>
+    <script type="text/javascript">
+        window.name = "MasterWindow";
+        var first = true;
+        var first2 = true;
+        function OpenTelerikWindow(url) {
+            var w = radopen(url, 'RadWindow1')
+            if (first) {
+                //w.togglePin(); 
+                first = false;
+            }
+        }
+        function OpenTelerikWindow2(url) {
+            var w = radopen(url, 'RadWindow2')
+            if (first2) {
+                //w.togglePin(); 
+                first2 = false;
+            }
+        }
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-24823355-1']);
+        _gaq.push(['_setDomainName', '.legistar.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    <meta name="author" content="Granicus, Inc." /><meta name="format-detection" content="telephone=no" /><meta name="description" content="Title: Subject:	Children&#39;s Initiative of 2018 , Measure AA	
+From:		Office Of The City Attorney		
+Recommendation: Approve A Motion Publicly Directing The City Administrator Not To Collect First Year Measure AA (The Children’s Initiative Of 2018) Taxes; And Restating That Pursuant To Council’s December 14, 2018 Resolution No. 87485 C.M.S. The City Administrator Is Directed To Submit A Validation Ordinance For The Taxes, And The City Attorney Is Directed To File A Validation Action" /><link href="Feed.ashx?M=LD&amp;ID=3911996&amp;GUID=03C32050-AD9A-4E1D-945D-0CB3226C5CB6" rel="alternate" type="application/rss+xml" title="City of Oakland - File: 18-1641" /><link href="/WebResource.axd?d=HkmiNSkKJcp9zYO7iQ4LQenL3JpSZe2UGKB_Pk4r5YQRuZzPsLMsZzwrSvy9lruIl5GkgwLvHWu67vwJMwKSFxUTlVdL05GtcnLDPfablFs-ZjDTV4SRhTyPSYW1NSg5lG_yG93x297US-_TNEi91A2&amp;t=637227651210573583" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=1qu98WaW28utRxnT2_-QQw5Fl_cHiV1V3Xeumrc-BxJMGBmpkzQcZ4VTIC3bqoH3zI3KnZp_msqQFaBs-JTBbuZAfDaeeE_RD1jIsysMohYv4jitzauxFgIzskR5qSn2FsjHuI5AynOOGqRmZHqZDb-NoBwqZu0-WfUHuqfc8wo1&amp;t=637227651214479874" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=urCACUaUZeT6oPoIZXShbnlgytxq3wMs7tMUnmP4aoFvw0sx5OWFviaAe2ZbWlhhQMX8Mi0FTDYCb8Y-WNvbuSFn44BI8cOyIzL5cbvgqlL7S5R5XTCNn8Q3MetXqXHM0&amp;t=637227651210573583" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=QKX1AO1vX8ebWKfbb4eOTKZ7XgDBItWqLqM672Ig3qQ3HhlG_I-hz_SrjdyOSSXr635e3yq9ulHFcK2kM9nd4YaoR3EZIdjDueENN-Tv2S715C9DxrcbNBHvWPj-Uh8x0&amp;t=637227651210573583" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=VRjZt5egeah6b4PxXB0kqfRiqkApdPHEpfSb4zBx4cKjkLmhhNdKFDB-5K3lnndr5kbmza9-VuKLG_Yz__aYY9LXimH8YKfWC115Cf_xc6pHSFgd0PB8ve8CLHlfH3klurMVwr1VLYNdTqbYSZBXCqeQOh1t9Dtjw4aSWfE0REA1&amp;t=637227651214479874" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=lsHxUYuoKn-ifTgGVgyNZf3eZVw2bqdnrrfBJ8SSWF0J6XTAyGsj2XcoukzmozU2bdmLMxJ7YwvzKl3RXRh794KwnXvNcPwTMFgJz1q2H-NkU9XddzMi2rc7GFYRGxglrSKxgkmfnuvKqK1tihnG7Q2&amp;t=637227651210573583" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=vsKpXOsoEwDUfVug9KOqSmMo0ZYmPmZq9pNuuInW9K8LhCVDiGx-4gStdZMuqyTrdQnKi2y2KGw-JDYkasLPmGPVTN_zZ42kaVpGhkB2gwWbSGRzM94ksIhHXxPA1yg_0&amp;t=637227651210573583" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=VcBz8pMfUoZQpDoGoq1YTiN7wm422JyClByV499R647fpa1kSPzHq3Zw16MGNgN_xG6U6w9I65FL-7PDk0kOemUjlEiKzTbou0vDDAawukd--CjQAMgkibKxJonK12ncCWDkd9iWvcGb6-41G2EfVKODJ5RuJZ_engc_Tl9pAgI1&amp;t=637227651214479874" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=Nhf6TpUj19KZ9rhEj2xtdQWB1AE9x3dfjERCbojyAxXP6CcFUcpIuRIjIS_IzCgwDtzHlcE6eqDW_UkCZmMuD4x586LEbaG9IrmDoMtO4sXgHE8h6D9e_UqLYjifNbvG0&amp;t=637227651210573583" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=sScE3ou9ilxFGwP1ssLXz4qgBLS5qdVPtMV5QXJ4qgrw0W1i3Ol_uqDyE4e34C-X_onE4LtWCQxF2A3A-5ucFfM1Io-S9bm9iEhNhq-uwd6aLGOSItAwlkvW6TsMyxM9DT9c9cZmSCirBjgzoc83po5MJpWxa4YJoToeO9NPSCw1&amp;t=637227651214479874" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /></head>
+<body id="ctl00_body1" style="margin: 0px; border: 0px;">
+    <form name="aspnetForm" method="post" action="./LegislationDetail.aspx?ID=3911996&amp;GUID=03C32050-AD9A-4E1D-945D-0CB3226C5CB6" id="aspnetForm" style="direction:ltr;">
+<input type="hidden" name="ctl00_RadScriptManager1_TSM" id="ctl00_RadScriptManager1_TSM" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="bEyVqhBwjHMtcqTxRkudyf9+dnMJNKzMLHLbz3ROCIfWIotf8NSuVjv7kK9V+OAyoSHpyCqsk6iLi5kGayA8YTMfPhTSseQkHhngZjn1+jRP1pkxBDj3OpVdprvv9ND2e/KKBfRG51ajBRwLuZZJIWQUIWlbjMIFuf3AC9mQZNRzUDymsU08K9OuJ1x18CifydD0DJGJdWZ7ZWuiPJ6oVoJm3vev9UTDN3mrdYbpont4C8GL88m0XU2oYMo4wGqXnH1DHDwWJjq9NgRPSOavU0/jx95Yk/lNMbxeIsdNHbvjPp1POQPUkvGuNtayCHuDlVrpDZDiX2hlq9ayd0GeMCCsfxaKvFNj9LcmRX3HrgEeNjlEtaaKW6WdGnep1ZRNTTPThvO2BhKpWbg7+oAqrMRxfVG3DFm24sdRtBN0e1U4+grLo/ZKDPxptCAaMMAbin87JmNpKg35hTHu3su1AcXJuOOcujzNGKMYIYpbZJPmOYhJ1YEqrABKOkWm6ihbwL+7hFYIa79x5+EaRXCGxAWRLc7J/t1AqSC0ySr7hvgSrHw6/v4TmxtQZUTRSX6reGZeq8L4wPbk+41r/Or7g4XSojRsK+8AiOpOHa+Elltf8EmhSYye4OuRsWEaN7ANKWRI+VMVzktiwZEiOLhMANeuTI/4LeCsczYj7mxGZu1h1UQAP476tdNPPRrDe9Sqa4qopyBwtv2J+EhuBXVLbpHjyGQtowvsD86mPg7DjQeAakQ5lw7OcWEbrvweTYKXa9z74LDiO+AZOz7UowdcB0EFyVwiU9P2bGtqiXTJN33XjqZng9EwkGoPdeYg2pXtnbfAgyz/xu3GMDs5Sb4cRkvsdlAXVQJKFRWK4y3hbs6IYRFxUUfiKwCPq/sQ8qnKVHNh6N+u9R55jL2GVf7NellBK9FTxJjdHcptBBUfkmiBbe8sklM9zuES+qf+kV0JCzzwIKFt8YNFXLqeuKBskKzlJNmR2hqUx0myGqNzoRt2zr9cDB1qF9sTeynqdiZWc3PhWSloLTVeZ/riFubQku6q4ZfxCJR1ALLUWHVWo0CBiCy1PE4sePVrVoO7OPdTBm4cCHsK+5P7X7SOIrWGItaGTL4xJ2gSsYZ4GCei3ctIm1r5CShPo6gNl3TXOALnPDIXAYERyhczZr7pTKR1K6bxwYNo+rK0k5PwWp79CLkpIYf/DIp21CYPmxrrenYivnEVkDrF+nQbcg8jr4x3+eTMeATrvly7+kXZjBQ4oXtGknZxVdHl63QYHoBLeYsePtBiMsJC/6gTfj3vdK8TmO1vtxfGFY/b4eUJvIS/06yowDimmS6f1XDu8PtpTw9PyxgjpTuvy2EP4dmE0I19kD8ohZ/zB2Cisu+vsGj1fCsyeGyRrUp7HP/KCPtl58nlGPg5MY1Y/2jLDcpiWGHul34V6buXPYZnHriA8VkNcNcghpKfWQHj0WRPsrKu7CGA3t1ZxmJlQZuo2l2IWxr2Fyi09UE1MURNgk/elCl267YZU/+jFzpHSo3wZRdy6VEdII9Ka0cLzchcD9rwBO7zOVh4VZiRqoImHio13dxML9r809Wb+mN27Hd/dChiV8avEPGgqJgenV5bNyC/VwpZ9fsVSIFQ2fxXFhrQgXiIfzO+niCMx+AegdGYoKpXg2zNrgnwAJT7FQf8IAihRIc9LWK9EQM1nxxrSPk+25ebNuGd+hRPdRr5/My2Em7yx5ySqsDXIY67Ab5ImWBS8AoL/gHYWQ5gseT/QvWftdCLnoBc1d30Im/wgpa8kKjpXAMfDTMk0Q0xm7uzw5H1mBYWkKmnsQFSLPmwEX83csRIFrfxvAwS/Gi4piDTEHiZwxdPJIBOcQiN4REvkTK5/xPXcKQXZfDljh0+ZCGMqp7A8GlFsnQugIKH1SUwhmel27eU8e3KI4bbiKpwaSbl8pVp4JIr/rXBzMs96wDL0XQmuorEcbh86l2o1SiWkzZCCj8/vmWbq1wWFo0l+S7NeWb2OU9CtJ9kI77PbajJ2ENj24c+cOULmmtrvu9jEvV2tbwAo8FdXXBeMWwfAJvs7ioqnEFsIKV/ZtQUqSxA5Vo0zju9EvyYN40ko9DHLVO1WzJfEcx2O9tUQpBWBpsI6Ad0AZz9Gp4joCncQ6wu2m9/NpDrTqB1cRmlCaVIhgAxbtEPDVxWdAQoqKCF0XSRJeIN6o/B5UQ94BRqmkSF5XrUKrxdzRSU3jzMZs9aM3b0Dl68t1MUV3RK3QEp7O00FkoI2iMBO+ZeUc+NViVRlyhveMCiFc7IL+K/3WrQlsXU9bSaPHJWmisLzd7PX4o/fucXDdr0Wd7Y7PfM6M964FwSNX65/OtoQdH1cZQwpPnWuT035sBha6Lz0n/u3rDWwv9vODzp18DXf4N9eI/cWAymoxMIOIlOye/fP9wEEGFWjkEU6uAnZUkIE3Yu+l79V/fWJPOjrPu4ulsepeXwgzT+wCcekbVbqahUj0KWKHiGLkCfUkh+ylHwduVgbOGeIpRtsxTCYro059cWQN4gCtYarqC8FQN2Ni87l1Z4BHd/RqguPB1dD1q0uOjGlfp8/c5uU6QBEhQ573iRWa6TrCMntgaKxXfgxOr+avOXvMJQcNzoVQwd04nzjt69fak7rI/aZCTAO7Jfyr13Q/CCAGZe80UDGObVcXVWZ2lLDgGTUkcOEPQ+zzo6fFJxv7heW1Kr+I/PS+DBra7BuB50uEug/fVF/VtFzmzztLuJFAHfgndw1aqSywWHAd0fQAOc23zim/A6p2qyba4U/Eo2ic79pgKvx647wLFqh28eGJrm5rGdp8ikyzDhoGTVWD7RsUwOBJ6CxKWMEd3LZ69dQalmK/wHMfFpMwg0t4e/czOLgUe984T2dnvS60aOqVsuMxmpXmzX9Rg3oCo4JHplev6XAOBXaGOvHPaFDD7kpQfI5c5gscVFJ0N4dEUeRfeZiRvbPdB02UXfzwIFVdbAPQsugfqM3P8Spx+i+QtjWbonAq1J/VD9STXGj7fEbwd5NzyaiEK0IBP+G3cVCQzhNCRmDIeSpc3OMFCqF8RMPvzho3XWeWh5jEAam5Cp77kFp0o+YdQBAiaTFpTfzT7rT/B24Ef2GTDFeBX7Wmi6Rfsgni50aUh8ab9RQIXwy0lhZmhsvCLK/qX5n4YJB5zaYWQxklItYsu54LIOMEdab/GBAse3n8/INidBMCtuYv3qdv8ZiLjJmbZas1wNWcfQxP/rUd0VF6jhCE71BT461omxbBfzwTg0TxD8xFczUJKZdoxHzw0huLY5C+WEqaHr5eIKMHibLR6A3yrNr3ETXqrz/MEUbckW0IL0XMLdqhmWNQPSeXazsfCoQPta7hbYaa+VTQMXQPtZRZqracvjShcNX3FQtYtEmlfyTfK+4NrmQsOD6ieSFTzg/pxyJ/IfaU9ducMidQFDTiiEQPBJoX6oaPpN+BVYCFxIflr8fLyMueDgWacJy/tGmQbRHfAkzTTyYep8P4h1zG5t35wfuAysKJddqal7I8mPvnsMKlum87kkhvjvtHCR+0c3lmKfefhxgGpjErMddNNVdmNyvzwuD/eTxQrSHwEJfMOdhNvjdDK8dqWQRkWdUY73bGPTwlDuvapzbHhzbOlYE2YptZ1kbgxcTBGsKnBOwCSk++pJv66A1qaLnKa7tb4lXC1zjcb0J2avSr2aRl53jZBYwtBtXr3QrWfrvI/NV70xRqkmW9LUJJYBsbPuTiClt7fR1qDURBSEPC7PY/sQsARCTYFPe3/6PpU5HDxVismV7NoOMwM3ew0u+hmT9rukC6St6CGaDdKkrhUTd4jltxJ8ql/RE0vOxbTCgVXkvUsjO/40A8u3ROCqVM/t0DZ5Edia0a7Q23q2EyVjC+nH7wr8NrguwDvgfUkI9JtCq6yRiUNf5WqOZ3z09k3sOwvxKTU4N50MWC/5r7lpyp97nFnPym7hW1hRg254KHIrEP1hXMLsEn35sIWd1fswcE9sar/bssn+/x/fPGqiEUHdajnGD37oRGz68ZdsJyVf0xrwIqB69v9mbwIVlZ7M1p7Fc5PnGPX/aMLPVCLIBrE2DJxMFpn6N0NkV+uRtXBblytOb9qHXRYqW4c+vJiLtjGtu3jT97ady2ngInz2hvleVJ1PbhsT/w2qLnes7WnR4+sa+bPPAR8X3cCFqK808AQ5P/KzlgTVPKQDNI0EIM3dd/dnsoO2Pw1i2g9EHNnOL+7X+iCJEegSDtwvi1cbtqvElDv8HfQ+RtEumA1ZL6nW6EnPu01t9ukKTSZkvTQg4PdJJOyj1VIZIsdigAlGezKlT0GgR+vxvd1cvE+pObRUhtpe1oUmAA9sEaMJIm1Q1TqLUAtNPI2q0aXU5I/iO7zwlwN9fgAdTpcNm7tLSyNwjExl2/bJ+OCUXYEHvAM1AugdzwbXXG8/pL0/Mu2oAnKLunIaoZrqmKMyHo+9x965fJDxIIFLXPi954wLeDNH5NA2DmavXRVVGNNQAJDxdH1acycywIJKlE7m+mWDvgHxlYC8SBb0IGCKKSP1JSObtOwJlMVjHMOgpSCv3bGjz5isJE2FOmmz4suR2Y5AeByrboKWz29CktaWx5y2nLHfxjtDj9qTqA/4Ha+zZXhLSrNay1AQIozEL530fH0H8fhUHpG5KVCcK0XDApp7OiAkfT/IxKdfp9gmdoVeQ3yv4WWPbbFQ950ShcLEzTx6Wg23QsiSVlWmKRrVGYW1/Yj5C8nXemOO/gIAlNa3PVEsmmzhcxCmTWLH+YsTawOz5a2y9ZMDxTgqKBhDwNsycgoDcmbZ7jBJ9j1CuVp2B9v/MyvmSEWzOdYpV8z9Hi1YwseFwY5bkNKOCgdIIvPlfbz+kjphsFPe9Ke2qiK5H5Mc6CLnxpcPQba8pQfFelLAaSJ24uHx0gilrUs8UTRf3TQchq/57yBsQJKMtoQxMXzyqBJMkFrsrAo9SYI9/0/oADkiaxX5iLng7m7i8+UiGaLOXi+lBPZJ6XHIFUuZaeyfvfYtJoIkAX34AHZW74J/t+rtcmR04Lbqd7FZ/n9t9pKrHv+GT22SAUOfKhFpfGffOetVHCyHvwjcb5gCr0dtXYIT6aCIAMfiu7sa0bD7OtqDcy5U5lq4WiYLWP456HfCCTQfp7mHYIPepDQQljBr8pHd/LBwgDkAo/flN5zQRwfA2szevMWCbJyPY/rv+C+wWSckfmWOANEERF+ECA0XEr/kwF0EXU5K+2Vk110zoL9e0N3+DhDM2dBr44K12gaew2nKzRXl+IbkSPAOyJwieY+VLdS1o5mUNgUGHaR1GjvQlFAN4lWq/gbp/HXwENReN5CI5wqOfxBj4uj73JvmkoXOyR/sLxyDVENLfpw/4tpXU5QdEDBQljxS1lqGS2a24gBj3gnjqZt68Fy7frFJtJO8V3UzdQx8qBDZLCVvkipL5ZIKS5l4mRSwMtIDSTIBT717XI56vMgNASI+LVNU43v+5XpsG3RmFT1tV5SARetto/A97j0LkNHo5a9B0z8/fXfyEPL+70+XoxkzQQpUTjXTar3uLB2/LMfsuMtj7UQK3NCjJo5mPrABxql6kAz6JJXdTnVCGEOPLJgv9b2u2fLCad+KH0FDlpCxa/WIY9xiOmuyRjKEfyxigK2ZcfCzCuGEEznXv5HbEvMwfXJs8hac+6JVGLxWs07XateR3sRF1hzZnSXoem+IAw/uACOrOdX5DmNehlO3Rynmsc4b+d0yCxxqMHrNDQJYTelxBCdm4K+Vc2wBP20Fa9TbSjhBW/yFlLwqfPN82tYJP8phphvN/RHm6O7GgbHH9/9XJTYVeQSu8T9Cu5vaJPw3/z3WWlzd+/9P0kQD+93oZNAJu7Wn3Z+ojUFlLlBWrsfFVjPjdfYtO239PjWwpJFB8cNgsC9n60qwkBHCXbFnVq/c9Gg8y7kfXHg4wZQ7+M/pDrgGv7AgooKl90/lGWZlFdwjJ/CWCGBhvz4SQrDkQqttEc+m705rK7CZtPy8gDB+//l99gkUReU1gOBUqR8FPE7fUSyU3gEogMT5xtsRq9Rr8jJ0XpQfwwqjOvitQ+l7+iDxQPU/r6YDXNpu97gbIloc3S3CEy6XDw7rBmZW6ykXQAhIRMglhgAr0Tx5T4SY6X0MtwxKaNPGQ6i/9cejMIgBz1ValRCZCGqBB5xWcI2pBnD9FlY4rk0BJcO9Li/kSRKYot++M9HFEo38H2hEuWbWJScD6nrZnoQUJ3OPzbnXBkBKX39kJJLGt5skv9fuq40heN7PEWh0o8M6Y5cSBxItLY9s/CWS1n3b3eZOeH+cSbjrApPqRx/63dRf/NJhmx5cVyTtNLrMueFBSCcObL7eFBl71KX7Q/AWcdMP8W4m/73DB7iuGLpBgui+C1VKVtZOonbfYUE8E2Re6aw+GDrGSkRfiUt5R8sRIJOPvY60AKic4qKoSOvoDokwz5g0vrC9aXDRJaMDnhhItOhxMi5fNi/nA6iXYgRAZFBJHaXdX/XEn90oHbJUBv+1gSt3x2Q31BbE5SMamkIOcBLKhvZA2NxrqoCHsS0yDDUmpMkBrW8XgOoJx9l4ISrcyQlMoA17VwHSPVQVCMZ2qZ5ozK8DOZ9OsjC2sBD12qe6aF+kVR0i8qlEaSVl03/SFRu74MfPqB/xmGcCS8crW9dSobrfKh0OLripQ5ZGgIQ7e+v0VMcrLZdyn1BU1y4dcFUe8PAxd9w8tsIGa2aw6a9HlIwpaEhotJEaiIDupxhLUWj8atUicoixXLiLWCBUyl0+4gEwy1Y42Bmm2bw7mXmxkAT7ZKIQHn+cppm4/ya28b9n93iod+/DJTZyY/1G1nt1NSARkYjnQmJcvWaEet6YIF8fF1WdB4aSgCiI2YWTqantxW8i9YC9ZOuuAdROkIr52uYuJzie3Oitz56hbm6YGqwx/lmhu80LbuMaypbf8fMIeL3DIOUe/ucDjShmA/VGmL1OD8lfXmDnuJolnhUUIAz3jXHLd06gnOu7MrZKcADd3o3idyccOELr7e2luU2gAW35Rj/aiym9ssq6Jk01QY8x9ZTJcaxdic4X89mx4Gvjxj9VuqFU1zSjfXX6Bb7erX/lVQUyQBJiNyE3ZJr+N8JB6oP03evctQNKOxmHBI7IzCT3eDo36x7O5ISYeqK50lU7KPKhPfZxm0tLvCsdqYyXnpd/bcFvRZLyFz5oAsHrYVVdAgGO7amK/hDBdeOJM8xsGawIcp86r5QheydMspeNeyJYiHn8wUWlndygHdWFbmtfioDRnZbGGgT1di7Vatw7F3VOGDiPQbsG+Yiy/P8y01IdrqHtWYiv1q9wHbiKebnHPkLU7sDQRa9+rfbaxB3WszmcTuP5e7n7gy9IGJ3UTrKVl/WVL3Ksb5eJXm7ebDlH7yL9qbxfHbOc5EroTQ36QH6z0laWC2GdBa5GlT8Lly/96TQlzg6GGSL6PuDk8/aJRhgwIN4vm9G2eaHz+u4HFHu9/dkbtq0khzx6Gm4Uqr6zmWqYrrfpJ4d8cJAiXohRy7J5QyYmoXYf8Rv+fZem8KDEzUePS3m+abheu6r4YEJwbO9/TNIEYxfoTXXYPUJY5g2Uv2WFkTour62efDBvUzDFqZH+QKcyb+n1Y+1xbLVrxWk6iDousxI6Odd6Pwi5D+puimIIoo0B8YfZA/M2JO3y3ooP5xtMmaIdNe3Bc9AjI7FcEnqWJMAMWliLaKlg+iLRj7rIJOKQwEtQTkz6tJ1WKHYkITy6h7Waoo95V0Dk14F8uhZPqEMIC1BnFLyth62LXdndKW7paVtM3lOR9oeploK3/6DUreBzg/ftXXE1b+T0eHWT4+PzRXH6KUjAdDC+DtQA3A+U0CRYYm3F3nQEofL6QSSNJBF3fcDRVQS67mX+mfAryMIKj3V46d6vE6C3/WkWd2ChqC5UZpRj2CS79avmRDhHf03nQY96DsD6dlFveq5Ye7uajpuT0RKS+OEO+ODC0OqGPDWyARJRLYp+K4Ih36dO6whM2dM4JSt+oQ2Da7vEl5AV9A8w0plJ22GWb4PG/elMEnS77pPEm/3K8XvP+DoOxAY6NyODI8oY1R8MrWObjj4/04Y2Q2lyVmJzbc/UBBkDgy6KJr9zm9b+5BvNtVN/qRV9A9g9oRrwNRyyXz/9/6DUjFwA7MhHUKaob2bRsd9SpCFn0AQi6zpCa2zmdUID2O1D8VLGlPv0VgDhU5V0Lt+Ham9Y++Bkfg5dgLHPeedzt2ld579AAf2jaT0geP5WnpGHP/bFRh7LGzRe7u6/FonYUpBTgx1AvsW+U8qx7Hnk1RJQtfdgKlxpTV5AJlm72RUAPAqKgl6c8gcBxJrFro+vvEqCrAxteNrXAAJrq3YleqnrKv3aSK6HESAaP8zyKsXMLYkve6oQ68pGq4mZqt19lKSX/M3Bvy+c/wc37wUQjdlhETyt8DSK9L7a1jlWJ9EY9+PUpcAsZ2l2/7YU5ZxXG0ZsArajjVEZcVxFZtmCp/wszUpvaoXJ5gnK1v4f6o34pQX7Y1OoR9daUNhbX5fA+1YE6cQX9hKdj/CX+Wt+1nwlcTY7S4Xy2eJx9wwbCJWuxJ5Rq5xSy99n0KEEmnDGu5PehHgKHiHS3xFErrUgWZELwBkSuzwJylY6yCQznMxbetD47ofJelSGcj+hcZ8MYt8PKsT+bz+5D6Fx0fc7Ksbo/XZuBtdnttrYjL34U9QIZsprq2nvvvXNl//GKDWdNqr9CZjaIsJiPTvBYz+kLceizO8kZ6r/d4iRmGi72UBBeJkqcMGmbeuGAFikWR1iYb3gVOfu8MIwGe4HDJWST6SWDnnspCA25lgGh/PDuSSaHs8rLC55VkozxI3Do0UqqXFKi8YHzwUrL1zjcDNByr/ze+X36JGrLU7MibSQToxGxr3fohIUGmVCpxFhABmASjJEoANKbHIPJUV57MeXQk3ys7+4pfnp1Ph6jAdX/Lp6P/+6G3hDMwxLhV0cbetv+g68l66W1jaQOPLsllx1vnHDnWf0D2Df1a57sxSh4rLrvZ7ne5YdrghkODKPKY7a8nwqSUTIWUL8uuxuopoaYTSIvyxASvUMGul4jvaCYTrFIfJnRFzVHlKRuG56gQWLKPyR5WE2UYyia3wF9h7xLi50Kf59E6QZYsH8hlnf8JlqfHNCFB+QbAjk5x9iazLZuRe+qSMdzVK7XNcIfDBkFSnlxcjRXH4l3CkmSt6TeMqU+kHbfmVgsCnbqVAbdh2UXauCy/0Hywb3YZhxEYzf/y736Zm7yJP494iUHk/RarAKvjO5jwsoL4kcAmyygtCppg9zNe59m7ErNbrkcNoMHgZV8PeJR/6wt10Ipko32vl7gSKbO4Be1ML6W8ae6cOVjTrIeMSLRnYA5O8xM6HSRZysP8O7ahh12/fkNP2dLmvrNkQ8cMysWlCv7nHao4J/ayAkHzE/5g6vw+4xq5fvvB8SlsYan3Nrm6Kb8i5WA8JBY7GK+o1elz3qNXUGODy+WalLjPpFiRQIciTsGjIv/z8vFNg+WAxwzgU8n63USJv6U/eP/7VJPwxCiq2Zb4SVJFK9a1z8v0EBWQcz4RTbe4U2SkdjJmy4IEXyW4IHONi1AHvbbGWL6yWiVzYXfsh0geiVq+FeBW0zX7ARZ0aH8Pnl90e62orXUPIhsk1KLvaIjNPEcX1bgKl468XbcdmGKedhphxRVnWaiHPFUx/VXqZGE3sLsxxT3k3Px9wYUTUqaJEulrRUcLEftKyOGNTBn+jPESixBMvopD+2ThsJxeUbsVAJlnYnBqrhkEFqxjzxRQUrCKVtH0KwD8UhWKXhnocCHWAehl7ixM5+4NridFme1GD1wHQkb3W2+OFMIuv/Ouan+Wqj5T040TVf1aI2nT5zVBxGeCQApdwcQJmmQhoNTpUv/o7N+BojDitL0sWBai5AoEvuSi6Q+YsE4SBpEkdGPtD3kYSpWZRQ7q9R0/uXgn0jykBtEF0JeqhGc+ocby3efJY3Bxwo8Wa8wb3TPId8CteacNrVORx9lbUpKojrZJY2cMZ1FVQO0QJXk10Y9Xj0iaUsVmxn5AVu7z19rL0kIccYkMr1PXGeRFawPHCacbv/NQ+XAU/AUxmzrTDA2RDBfAO7LVLlcL8svw0+rj4VuJm6fONmMGHG4NRCe3oKraJ1RVaqGJzkUZH+CR7/mOHcMjTSZGdBMYXLJv7pcX4frXRkpqWa3kwDX2uMb1JL+MEpq/+hX+Ji2R5KxDcWLSEfoYf5qRq+2Q845PJCZ+DPJRT/bMOTiGBaXnuCpM3nyku84WYv4NjhFIhQ5nZGEnvilp387unXUNrTNJPSZ0oq1h7iT1bqs+AUqqK/UB3sLNkL4yOLP2cVo3+4RAWyNfRSLpag1ONy/PjvDrQvFxbJcVb5+eyW1czrgYFW4fmGCaVpL0XtsPzCEqGSW4YdxhF66HSTCTe4RUCDNrqdKDXB+Nu4nhWic+FtHajltkb5t186ZTwXTwZJ85DI063/HZjVyJY/bgod5uHvpVzzpJZ2mW7TGvrSoyEWVtDR9A/8xUSLfX4KTaKG6CyxHsLZ6WnR3NYxCELxaxt6OP00ETS9BDA37wBb7uVmwd4kmSrzctMZVkBW0tnV9gvVnDuWHTOYc/FnS5lrhb94dpsIOVKzsjq4mXPOvZhjQtZkQo5h8EHM3pGkuZ3gbAW7s9RWc5DNQ+V4M1kC0XVTifGixmHIMt1whD2/Y6t6IkjM1q23wMEAuwNFohricVzw052k4ZebRb6P6QehlJeSrSrnevWYTH/8LrtfY/wdubxjilVAcFWI5cWpRUgSZMxXY4zFaO08R04Cj+tiKnlIErms71s0x3MmfCMWWYoEAymUb5NbPaHbJEUupR/emNdqzzbutug2qT8nRKI3g4zlwZ4+4NVVVD0BK44THTRfDyxFfiauqaiVuLuyowNVgb/YREikhQQrwgTML5E8bSbtwVlj7bqp14nsfrECmxSrj2PV0hRT7pj6sKSiFoXnnsQxKcn3cyI75ZvT6qWN5BdPtTFp94yuoULieE5tyPO0B2He6KScK3IhCBhaAnI3CTFBxIglBYLR0gM2O8GOZzf9FaYS+nNRS+nYMZG64yAIMEwY1E0UAs9viZSQly34yjyCyCgAYaTg0uyNjI17TvhLTWkXZsmHCwWR1LNyj254e9N8HhnpB3CPhBs83VDJI6sDbNKD+nqMKqoI2JQPDJSsYCLItL5yoYa7SR93myiyhU8Dj50GYXpAlYpxOjS376vRKGatgODkDKb+1lAh1pdeuZHMWFgj77GSzAHGdmtl0weh23yilUkOp0fyAuwfrN9DJU64D/JjW3moawW+utcEOIkJXUf3zCfMAleNScwsVmTANid+KaHq4vLvp+PXy1pTMQlWx/9LUAO/Maxc7RRrE4LOvjuodLIgH+8Rsj8fz3T6c/cTphFQyhBWsG2K6QnTqhCDmssPCNBvkIDKSiJwYEqMQsqeJ5/QUYJ4z0PaImhwp+7bjP9f/djq/y98+Is1IbkgRFH4B6R7tQ7Tao2eVsowjLJxwYz8gE9uS973elkw5lq1PQfJTZLrDYrYZaJym8zgA7i3Dk+wrkGkrx4DLhWMFKHJawJkJ7QajaT50Ri38NbPCBqt8i6W3tnYI6Yhvl6xolAsDCbjIHlqjsrP2hInfaf2g/c9N0xQZ/vvecOK4HdX6jiuy2tEDYDWifyZ81uxdzZq/TVG5IvUGW4MEbTLYOT2YT6QXl6IUhReW9HOShu2m07AKFWkR0lcpkHMyqiGl3crLB4mYN2QSc+FM8tM69h2KzQT5/T2vquvuWwKbvZHbffRDr5kOZiy6c9o3Gq2b0hf5hW89U8KSuuYkYKObZU1DUNJ18uuEq5RW2K2IkdCm4Xl9QAJe6qCvCsNF9ug8WZJfcWITJbGHxBAkzQXZM3HM1BUnUSOwRtIteAHql0hdnfafkPPoi26vq/yH3jo3OWKFjX/Qj4h7fBi1oWoU0aoEyPFLhhSVXrjbMtO6D5xUzmgBe4BSTYuWQJ8in4i+Q4O9MUwaWWilYjxV2NtBtSvUd0vsQ2FYTM34PZkVqsfOcs2RB2TnkSjJ0CO+WfdRL7G7lgQGKU02+f8820S76DlQZmg5uusPKFArLgw19ac29GaO5QhlMbjPqGZ6kHEWP6UQmJAgrR5k1OhwW1iPJqA9TQ2Q8Us75BTlZ82eVwYHuOML5JAtw9j1KY2oZWOABcYayFhhZL+KmvIuP5pNDkM2EG3lE0EFo+qJ8Qdyj4ATLGhg5C5xquhBZEbWCqaUaN5vZQNdUQUcagQHqiKAVjt+Abo1DvEjzToGmbdrzmVB0fQu03D0uyYj+dm7JRqBSzqamzaelYvpDIMUSKzvNPGawv7gMAcq1NPj+xpJwJOHPigw5+VqxZe58Ub5qgComxQc6L9Th0z8mLtHO/aFqXmMFYDpLRLjVJULPFwD2eclvCKSRvsnjGmHj/XGvUd8AYiacZm4ARSZkaS+8SXcYkPP2XzBI9jNbIjlVLYDfI8ATRiTpXgjp7j0JDpngf1wlZ9o1g+mnfxwFIUFokh3Bgle7r84JvbgwIrGGkxQ19N+0UIvpm5RvQaZ0qtfd9RKBOTiPy0QfB7JE+H2zH8S73kKgeObXzJsCDVNkWcj7AkJc183Yd3MOHMxQfwRshOjRV9Y4oDD6/tmZcj2G/ldxyTE+grT59wOa+IPORHSuIhUPTaov4upCXECHqNDILIRWdHyYnNOfkZllcEn7y34uGEgXuDpzDS5wZ4em4W/8RcjsZmy31muBN6h2SUEZmYYco2+oN77wjBOXU+4DFZ7bfFZZk9fvhAfQlEqDlPCcthiniDK0cYM9mck1uki1rioNP/e8KcfzS9Rp45iueDd3wjNr3KNmS+WFmIhhG0yQz7xRSyeakeS4snLAzb9hOSL15LTLab70D1Kp3lciUjV4Uy7QT8G4GDrNH/Xd2E/Vi2qJVLf74RGtlx0mAJuMSYM6+4o3DwJ+ao0uaKR4R/tDMpc9glUfDZ11RQxs9kLXBPxeNRtlLkr0t4m2UEQKLd5dM1O8BvDmDqlDokBqDti+8lam+rRgSjmGdrEBUUegbpYvtwwuK4fsSnvNy+Rp5EmDTAj0iMtyV9e9WDkxgA2TSWOfrZaXGCSeSlAiu1cS1vF/HjBD+WMD+IYLb2JlR9//CVCuhGfdoWxfv0i+yB0zjC3It0521Rd2XhB5RVwp9UuNEyFyDcYyvHAUDuk6t7X4BxpdvI/96JaPiwnGt77DcPGB8GEOFItA/2/4vIyzBFytWfOHl4wkBBLA6ICUNi1ZzifxAr/PjnF58QeoL7KDc5KICKaRlAGSPuoIe/KzZx4pls8EVCWhlaB7QRT3BbpPxy68E6Fm+pYduQnj0uFU+88FtlSNXy7DRtUCykVZhZtsQOgNo01ZVDoce5vyk3x6BU29Z7Bgi2Qqo/X1S9mXMfXgzgMf2T5DalODXuKttAIb+TxXMH6o9I8bzUdDZtcqlYNFEh60TDLvkueZAG9nxBrttIOreB+ddnN+Q+Yksd2yIsdFRi4WwW4VsbhAIUxXbAxu29V1Uq4ROAzR2KBe0xM6fGd1IfEDKZZlSVi/3uCHDvq3nd0uzV/bRBjQN5C2mHDBJITI8SR0K4x7rnkASy8hXPkbJuNAaUkqDgUZ8K38g1AICnWYK41lM4Ev7ku8xGaRjlBOQP/SGbO1nbEEOkDML1jKVazmgBjbZOropaBwCN2IdfSwzCX/Lbw0OfQeU3uWCY/0DMlhu39YSQoMrnLsJf5R+xNJDn7MWriWUTWGZ3v5kjbQWk/wcNUdaghhuXXrLc+L/q6JDy0VPEhBVoCPBjCa8gmSlVEz4JZ4HKGLNWP9Ssgjb7TVd5Z27CjXE2inh/963y5HXoMjElwQDwQJwEfZECyNniGArTvsuP/M2f7PQHVYQmP84sDNuNygkQQgtBcfGdcN+9cUVm38hxGSfleVfk7GqwDN65HC3JaJF0zErrNfCh3/uWzvkIwK9CLZKqJdTxEbBcv1pz/e+O3QGHw+s35hFzv2QZJv/dDPJsgPwlFQvNi9yJ35MEacU319UTQSilqyKDINNqF4kQNh4OeVcsOvMr5wKDb5b9R9xu7vZYX+2z/Tq6qoy9i4p/t3aOTgjdEI57Sv2epH+zZ2YM5iqQl1F6XZVp1Rq1+L5hHumAe1905CDHHeJBt20iEYWm9pe0ybY2/JG0x/aPx7NEN0Ase99G0Y3vfU8A1UMsnQW/g91AsvRQNCp3bHQVz8ID1/TkDU6bV78CpzV+G+onFLi6hjbIA5UQqczh8Wy1ddbXpXVeXZ+tDfqJuX7cNdWRPjb2Pmg1RoSCAFPcC1q/lnet/KCATY9gLJpRjhnvSr3ciXgkwTn4ltykKO15LGcy4NGPKpH0UxL+WANUcmS2u3vNX6AhCEwEiDa7QTLE78e3/AbHvuHWN63DzXcHhDYNM5ctrhLUfe8VG1a7k8ieE10nJY3rAezzpWvIJV1BJblgZcb/xOHfqVurzaFFnzzyxst6OwTEE/dus6SuHj8j/Xzf/SncIQ2jwqFADK7oQFyXXCUtfxnSxlCdXz5+GaJ542HQs9lajOqkpsLvIj6YuT8keyhvnS2cis2gsBDYOcdUFt2KqP9Euito0mX+LGM7Zhb8hv780+QXzOVT54iKCV+TCNtxJMtw9L8pk4sDad69AR4u5m95ogymMcKnwl0NVhP4tw9QFQInY3XhQFdp/c5+lyrATQWNsH1Rl/HPK6uw7k158o8j5pXVv5i2Xf6SrhWzD/eGnO72DMkWQueEu7ALUIdzp1wWNuyJDNA0ELYpWyonC1HBmsfCykfMX0V1xcLiQFwcfr0EkN1UQfZczAa+aL5GRT+YRBorF76OdGsj8VW1roCBkHDofBpG0hDwOHBLlBJlW1NNdniieFbgkOz0ck5aUrKDWzyoF8sjwV+xcYEuDuzi3F7WxL6IcDDnsnxu406jkzPSfxBk2L2NctpDnDgt9Dl+7kT+OVC25xLSQfKh4eOgTrKUj+2ecT+Pm3eUBkDmPDpNwqdoyyOEBiCT7a3YtpK24Zkm2SMfzjXj0UG7USqVYjzz6Csj2UYCT4c2/2im1u3CAEHFVXUE1JA9H+LPeKBAs+kZsaH41WvAI+C9Y+yEgo1ra2HrCPEJGxSL/QqXOF3Jo4f9LwtzZtK61//gGL9mLgrsBPvlJyZb30pDSowFWZ6+IftrF0kfOSbPjvkIcnC7j3JKVvp/ETN/dJQzhzXB0tWsdkqaD5l4Bx1pR8DuHdBx+CHN8ji/TJkPIWgBrWvrKyGRiGZ585nTg1iz8StROZAhnPK094I7+dmAw3nLCs84oAvpaBd+hKFwC/aJG6vx3EbML6qesF5j1P74/FD+VZgCfNicMSiC4NREcM/2xhPnQeMwNWSn2KagwB4/su/tYwMZmZQixwZD7LchKpDusGnuX7zr5dJhEV3IRzyEEhqK2hsWc8oy2g/XX8m0I7SrweQCb8cKdmUxZUSHvS79Ta3Gm7b/Px3sabfmwtVUhYZ6/D/pf/HAdwpp7vJxkMbJ3aWgMKwIhtO0COObNeCpFGwuoX7pyFd4QogCgxo0/p4iB9AEgJHsYM+2VKgUy2U07R9cdg1DOSsD6bbHUpxtBawCuA7bTkyIOdNa5zj0X74tmKxmLfEYK86s4tirD1D35O0myzdErEfA+TnKvKRn8tWI6w9Ji8jME3BmIFrS3R94WUryraLDRRFrw5+xp4HSsA12WGhThEOw1H4C2sk1hY7jio1D5uY3bSpc0D12Pn5tevlgGmLbtYHCcKlQWWGC01eP3otrt5RjrdBTG1xy/3v13qAdd/HWOK/GeceuBzibnhbPsmCr4TgsVi1DfwR+7/gPOwfsktUiNCNT4NO420Hth2nLqdUQlljv+6p+ht7Hl9fq5issHoWz4PWAg9+bTjUuwLTG7fM2ql/p1u7KnyoekSo2f5Ug6cTuhidNOD5M1nQC6I2qufGi0W32WPqv5l89x7EQBL1QqV22sVzSv59JHTfRDGwJTABc+5MeXkUtLuwmoOzv//6eh63vpKWfFdNX6WDGl/scVnmAH3W8j+N+jewKxVUH1ObL5lYh9TyRYe4MY1iziV3Spc69n5i8zaNoh8qmamCXYoelnqIXuO0DGhdqdc1G2aLzcL4LVLGlf/lfHNu7zn5EAbJOKesCgsZ8aR+kKRVrgKJC3kjbd4AIGCgDvEl2Uw29o13trtbP+nIwTAgsAeQjQPVSEd6cwYBQPqB3u6JoJ7NGpjKDsyFvUO8lJhbRAo/rbVgu5AnOZ5Jfnd1alGvuxe5rMFim5rfRw9r3+AxdZUNFncbDlaNZgIBe9guCRQO2VuM++PE+7m6YaH8iQAWynSRoaUFL0Op4zLfgD/eLl/dXm33S/+qAOeXCorlVCQd6esiZbd6TB0kAicHwYW2MGU+4fD2AomdTWhES1ydHJMJ49/Jds58e9QHgsBSWbYVMkH9CWHRk7/uWTD0oR4WxafAhPb0OACcNv6N55M1iE9BZ9c0QOuE2ZyuxifEu6f4aYQGt5jYUOvWAmx0hKtvx7gy0CAyOxG0ND6Fg25avAAZsf0xy8MfpueXmOMOAhEiwWum4ZPVhmIaTOTDPiKCuZTis6+5IJ/3BEorf/T1SUsn2lnUJwe3Zb+cqPmQrh/UGcQFsx2lzyP+rHQJByZfot89y0YmdPYdGH9F9u29tESKV4Pqz6ZdFw2JzVFKQ2ARaC2CuK0IJOCi9ZoMCeVm3CG/MpLSBJay82daNwZVyr461PKeymFL3PjB0DRJuBOrt+cUSZPts+39Qb/jPecNcdb+g4xqsvjE/Qaz1rRFUDpngXPKRJiz2JwEzLgxO+tflEC//lz8CfSUI621hDdERucI/GgYOW/gD0btXS/b8G9ZR/83YkiFEGLcShW5szqHitNS1ygXr3rrcgKs30pfABHpZu2/wgkq/gFo3+ty0Zx9W7Wq2qNIDeXe2kW2a3yak/Qwjsq0c90pGJLlCMbs+/YKPPkSVM3dARwfHbQExzu81L5E+g6RTEGQl8ZQQi27L+jP9ZMnEYCcyEwX8khfRVMIjOT4VlN47WzITGvP5u0F5giyp1pHtDX2rjFCVbIOdSEMT5iqwJFIWV5jgoWl5ZspmFZGxOyH3gQEeicHxe+rwHnjWPedOWBF+TPcJNQIGBc7EV0LcU58MZyCwlQmuwQF4RSybIqa8Z7Aa+cIP6FVVUyxRizQSabuLEoD28zvRrsrL/sgrTIbIERtzCuGOkmUZ0scIEHmwtBq7iJ5lXYs2Ql/q8gFr0Hkk4G4jwC6WOPUHmJR8SW106ZspWsSES/zxX6twwlQJX2CthTgzcmFUVIWHwQp4WRV+FRqAbCJP4NBpF7hxLK8TBvHyw5F0zkQ01xDCfraa4h7+Cqh4UtADkRdUWnDIQarafReJws2GdqrnKlwTgI0x5/tsPkZhCX5MYx2ma853aUWpBtiY9p5IlxKeS7D0sP/xMsNdSa1XMqwhUWi2yvzk4gR9Y8KS2F+yrkEAbJcqR4Jqtawfwg3QDD98tkVbnbTQEJoSf643cPhZWn0weVqwiGErIQXQI7Z/5wvYfAf+KowonhqvKe/7rCC9hNKtY2j6VPfgMNY4wnCuh47VVoM2p7Xjo5YTPgpRb3VTlM+RCwbzxW927NV8yd4OEVjEZs+UQ8sYp8y8btCTxm6tQ7r36cT7MuYWrEaA5yRE/tC7l9EUlFGCABrzgswCc8Ma5aaUWwx8YYLi2uFFqO7kogCrEGV9ITxBdjtAZGsdoh42ctQwVy3R1vPZUJDQhtaVTR/Hat8wszOMbjekdBK5nz+AoHEk3R2Ke/0vvZithAnizcdeVLXlX2uuykHzWA4Gbh85KtdGrPhvuqR/NPCZ73CncGD53kusA3Ts+Do05Ekag8kEQMM0Lw4i+bYNX9I1eTG1AiJIwdGRn+e8VPrPz5uS41qtsINcCYlCRiwXy3VHbDhUFKe4aEnELizW7vj+nygqV8R2utg9vnQqth/4zudx9TuYQwnl45JZyzNGdlZjAsSl6GuG47BY8GsbSRSXAzQQAoQ+Yv6kDJMRX/5kveOLQzP2+ZElgFw6Mlske148jPL+gY9CTqgUdW3k5dVlZ0uP9N7c1y0f3flrGyTIR2E5VYtPyyVdvPGqQ5SR2YYwr4kPD02czkTlmYRjcUD+XQKpo58D+FV3JxsaIrnNPLfUrUkIk5worqkQQq05g6b0+JTgiqp310s/g4ppLCcR9dZAapqMFA5w/gXuj32ToDHLnHJV3YeB6115NkOIRDpKRJEB0d9MpNjAnHJBG33iajDgGPcKm43cYutvOD4Fy893w0sugUwviL4GQJizqoS1Mfb/KUoWV/Uf+oBZ4S1wdBkmQfga4Sl4rKRG3Q4SQRk2bKcleB29kLNM6m2TXSMtZvEqM3AmnYie3+lXd8Q4E17PqjAi0LITC2L9nXN/D5TT1+TKrVv96flIVeY1KuX9IKym4mfUKM5JhARvx8VkFoBJXfAd4/nSpAGTUJlIqKu80ZVAybiJ5Vo810H2qbKlRa4D/x7StWlcYG3VijY6xy8bwkOnos9p22vWcym6CDbomUFPXcwGe2hFoGRTAv9i8a6AyIZJ/MpHiY/Iqy6PY2/hUvk9cvLz5qXy/+famoHPFqrMmA+lxNQLxB59lZkSUEtw5gfy0lHHtF8yVjWhoeN/0Ryb25fBevGOmrQ7UlCdU+EH1zpKfLqd9JLz82pTeBKm7hkVyXhpHiO4TrayNAXobdD0pnLVWFXVYrAT1WgxFfsYsn5vO0j9RxDMP71bBB5xto5ssmOh1hf/0mcwNqHbfLHkAk4f2wR5FenKpjBljybWQhlmhOPbzzbQOx3wPU4qrDlxhxP52JGRGcwNY7WAo2qbRjiIzUQuWu+m3DEvE/PzPridT/sCGcsr7p/Cj/iq/zcJxdV8AAUBgG8RLmooQE6PC2TmGp19Vk9R8Q4NdVUOawsBFc7CPV2WoChrdw5mgHAPiIIlXKZr7Vxe1vEXPKvASN6ehXvFasZVDxa3liBOjubVsW7lVHnQV8vOUwInRxRS5zMqXUTesgyflf+ehHwsYgBXtYLDVQ/ucKwrtzSVWwQ9OHnvAWqGKkbFOYWE+ciiir9LQDDHw7BUIc1jMa5fIxMMVIrRpNxb4r1pd6zbPiKIbaDLNGFbiD7g3gHv0feLjRs/AMH0M5A7WP/GLEqzKrz05NWujLjUePJkJfvqV4wDykpw0O+B1O3QFq0c9d7DJwB0KrBSbqKeu45XAz2a+BNvpovztpam/vdYhV9fHcLDDnUGa+DjuJXYR9jJmocl10+poYaIJI0RPAbTSlsD0afwfRMQ7GYvJEoH+wZVyxUrSUx8/UZOLVvFmlZeSk6FVu8RJ5Rgkwhobe7wsoOOuX6QiUr3dPYBybWmilmzH34RkBamInpHSP1G5TmB82WzL3Ws5nFn6jB6D/Nq6fs00wm+B+Yym2Rbms55LXUoeZKTGQpVSZ1N7QMzHN42HSQUWYdsFY1zgz3bsJa1hbUeb/6TiOu+d5nx5vVuGiMJPliF3SlDaqMTg8j0IPnDDQub0BIsWfFAn4q2KAy+PFrRT4F+bie41LxDLUlyeV2m/sETJdo1dTFjuYLabW6zzw8HJg2J4IZu+rJH81A+upCwR0n/iR5fPEQlkDYo7LdUVexNcZNQSYOUCGoG+rEFShPnU1pwK0E5e6SfgEHSn38gRECGhk6n/shFRo0JHVQW07z286MrToyRq2k1F/0W9n2CqIWpqZMtXUyLr7bnGak0trvaKtTOVP2xLP1xdGnQ0dRxLBZzpF6eE9jf3nnDcmEGcptfDXNmhU94C3lmOB+q6mo2ORKkVL14QCurkYHxZZCFfSAnkbG9wqFJxtpVy3+q+Afrf/RFJT8d0qp/lrgGiUBwHXQNYZslEKuapN4HcGLIRirZ801qjj/uSr7V27l2Ws467+XFY3jpVWR93etBkPpsJdCImUxixBGVNikyoVj3VQiy6vCj524ZuRUF6K314PA0ttbhFU952OALssMt0Kn3FFg8MuJixzYKTns1yFLmginnUtn+Ji78hZOfiutLuTUcMMNPpYfw9B9Q7ZlYAj2fxQkM2SlIuAs/gg5i8Yx3ddoXOgxoPPmdyJAdXGmaKrgf1hflFgIxXqcD0Wp6vAmimtIbaoMaPjeGCanW1hDf3kbZWw75QVwTews4G0S9RW0awWZjOmOcpVllik8l8KAzSMWAkCOhnWJvAQ8ytCE2dpd5hydXKVinToC3PIstDZ+1AHlelS+yeXxkiW9D3YmLmhgskNOw2hgZbhYUo7RtgG9BWoKtwZmY8KGp7usI/TEQy0m/Cd0hNGbTxD9zFHGADT8FxY1tzrd7z4hpdTSwVzeC2R3f8zMfh86K87dHyptLY/ukcNEaSewKfcz6rZwsfqNToOGqT3lK2iGT/CVABOC4djFyW1v7MM79Ydn/A6RfcCLVg57fpjtRNoV7bPY6pV4MxQoT1CphA3emrGH07Vv5WmvpIIGeoj6chnWVZ4NNduwzp+i+6BoKaiMr1nWQzvfKcfElaTSCG1pSflkzwXD9XjtHOEXNhg8Oz52OKcAPWNuMdhmQQ1VR8Rzvd0B0pKQuUwJyuumRFXHElUq+bBu0P+rXphMR4dX4juzRCd+aBM9CEUIODKFcEVgRbWpOLMSkEJabjlKWCYKnqlEwEqD3dNg8BEJf6JGAfVxDm8ch2evG2FOocubGqvWnpuU9fugQeyGQG/Zupz4FE5Ts2kSId9IWn6I1VoqBmrlgXISZFUEtpWHa4G6ETD3VMd6SFtIbwhqDSfqT2tUSgVbKE+RQ0M+AnvpVKNFa/Fay8pTVwotwpLK2/Oud/jv7LdkIGu382aWeLR2DELjM3wBSzooCfsRXpVg4bKHbSmXnSLBblUj0QEjZiG0JZ7sjCgHfSjH20rQDyanbkxUEfo5HqUEP9AJZv1sM0kq12ZG2tymiZmOtHGvdYWE71NMfRs5I5Lw7j7yzBLAY8JmZ8vLBgnsc+UiBJ9G1tIhiLUN/+9iQwmrz99LiHg3zzJ9Bw3VYGF8/JwPpMSbNbEQ82/7BYi2UcPA7aLd9ZCCV8KJKAGe/trAa6c2mppGdp+mrlU0BJhuP5FPSmu+jxF/q65F2aUIUG2HNONvW4LFZenZdIc+QxCU5/4y3tcRTYIEngVwMJVrMLS8auWtCa2BBBpKSqP8frOnz4zVZWh4s1c+4FekkK9kDMtEvKk9z1q/ISXT29XglzNJzpqs0rfwyI13VRREnGNAxqFrbLcoQk7bSZHtsP5cI9ufgh7Mg2zdoqgMlusZdwQ1a61qJ1F0D229PiiT4/UG7kZXWX+uUlTb9s6Ev9tHkczC5qTvS0MC6cxBpNG173Wi2hgvVnUmFS2LnfO+BEcvXBB2ZAyGUNYDpW5dcn8GbNH+Mbq5L0wO4VWn2FNxQg7afwxutd8agFNxjqIVC3a5tpsV+YW+QOzedtp/wtTZ0n2snd8n6Hm+uy8b+wH5fAf4UYjZabIrfrGcOwHmz3+EUNius0vhtFpz2lPbR78ZhHzXt/PlcCjva6ALsvj6lLLuM7Q4ImszJIEKFIn5+jC+REf52Hy8nC1uAHX96hLTtRkeC0HaQw4uclqnLy1islItUIpkx4RctAtWaZXK4J1wbZhCEwshasoCpTX1/dgVfKEm+srjwYzAiy3eL4KqlXhlkNwFghY5TiHMfTMbhXWws4hWMbYEv9ZZrAuUbVlBoVI1+0986pVy8hr8n3cvZgXiyYOT8rnGCSPtSFZxypqrj5SQQGPppNqyeF2DUUShxYQsLDABir7mqSjuoEUPvUf8ejGT/YAgdcxqQD1EFJ6Tt1B4FtzZUv1lziQqbZsJ0jD5l641nyLh3P1Ho87hKjModx2B81E1SyC+/0nR7zCc29cnlQcIGvtV69JOb4e0On0Kfbip58jBb+uoXKhgXRNq3yF1ZrkBM6y/ugz7WCM7+j2xg+0fMa6VuRnmA02+3Rl5+usZeNuM6BExqlGM9rd2fHf/rLVDPS8Nu5T/M/RqnItUhCmjGGA0pHuRzvvl6N71Ssnmb+Gm7Jgtsy/bWroPBnQHWLSJG2GX3lKiKpRnWBcnzc+uVBJYNh9qeUDTH8QzZrvjihyoANdqVVC5E8xjoKUD5YnKUrGyxMqtpmLu2nnL7yXbW/FPHAlk1h/frIOg+9Jj3aH/zNJmhlplDl29S9J7xQSaDB3fjftKRVIOCTT0I9OC1p7ufdVeuc/6ypVHB7WLduwxkl6XAcTZw7r2Jfim+JdRjiFWIS/niltKduRsXQi+IFxn92uq/lvxAak/AWNxNHPrNwy+vC0TUmnhweKWo/eurtDiY1QINAdGHtRdFl6Dt4bvmONATEHmWzNxC6N9FvbMfgIofduBDIPngm08k6mXHLHVo70Bcb6Yd32+2XXL8XaraXWMatohy4ue6+CY9xgwkJ2f3GNMrQcDKmZzPPpGqLKAV/xocGJ4SRI5Lj9RqOQlDONlsjzObywtq3lIoR6Wfs8yq57Un7iRHtRW6RCG7leykSv6frdoSeCrUucqCGcdzbOkumFXxIJjAew0c5Py26rj4mVrEC2BAYzbJqIiDXt86Yc6Bro09/eF+AZ9qUXu7HoG64LzvBOgwIiNHmoWN+3B2AA0tGfTtobRNZQrsCOzACl3HRJgKTBgD9Tti2VhqcytE8mk5jnhNco13hhE3+BIbCdX8M9Bg/egO3qGpprMs8OpanKUGJdIoQq0PyWdbDGwrhOtX/1PLfxv+/7cKJh3i8zLlnqKS7rLf1LI5wJZrcxqG5zlBtBmrD/B1gwWtX8iz3mQGqe1MY8cU5XlVxscKzjnqKiag5IYqk2f7WOKf4PO9jZySOz1UTI/OpFPV1URu7V+SyGXDdFz+VnZScAv4K1ZK2BJumfPqqe4Dd0IArfC4c2k8K+6VR1unY2rJiiyiVXwYtrxCQVwRKEXtfvV0yiVRlYk3AZFSmlu+1uWOoBU0ztYsxaFlyYzs9uub66JoXD15CVp+AFAcQl+3FHm1mELqmuNrpImHPdnfreptYTWAydQa+x5TK3Hi2+LtxKmSThnmTg333sDLQ34r/N7yzalmsdoLsIHyDGp8xruntbdEJAsc+aOFULJQEDsDBS3KPbxHVgFUiNYLHy5eHU97ldc0N7/GbvtKvKnW6Zh1Ep+Ur25Ewv7bCswCP3z4e1bYUwGqJl3nudjI0e6zy3xegCRwuGXBOOAxn7xDXqd46Pqx7zgARfyQsV5foxmB9j1Lnt205yTSURPlcoBWnX0w9pJdwfs/SeQl46gzDnJEv2xmGt09Z/EH0OmZ3SqlermV9cZux+eqhGycizq50B2m8VpRR8mlRRHrXGgMsKpUB8hoOhk9ybQmagdAWoaAo39HP7F/tt7k0Wkoqz4skjnaUaioDrdA/AVE/pdwc+R5BUrWNAySnsEOlWvr9x7It9dx174EL6H/SIYbRAIjapMS9ycqb/754FVUZSquX52AV/A/20pP3AYL3NnxRGwXBkrdVJ6FokYMsm92m+fUSTWyEyTowZuwRO4Nf2neOxTgOB7qQwljoi01Jg8DTcIWRWT9bHQK/rm7Y4GAjnREBvevw3DOcdduta4kBAiyGlU1/N3aaI+z59Mu/vfR9me1BQfRtajNxptcm0RyOfpojk6bXif9nLVIHqCBqk/tV5gWB0VH4INKBX54SK7QVl3vhyc2bppMzRja+4JTln/mngTCTj4UstU/4KhhkomVUb9YWkmxWHtU2t4ABWAMntMmECYQDmelJ7Ksvg4C/xnpVquzvJtdornLZEenW/4Xg14cL1ciVdLcVR8hVaXnnbkbdiZsX+/wXZ+eJ0bC7Z84X9K8pUwQ9ROZeOOULfh9KxeLziXxYEpR9edrI4VmiSqBOhXwOfCUYvlmWE+bq6WW1R8FmKGQ86PrvAuZuLhIXiMOSl2gTaMN+w4/Aqg+iUoVhnxtTcEj8av0M/kfaqRRB/5G9nd+jDfVjOq4FFpHTb+dGDTAP8LWZElz6rd3U1Awy9o1gA5NUtZVZpCxVJlb9jPXEj6Eu4xsFXC8QTF2MAnK2WsxHR40XD9tjCgQMgnXUgIEjKyAuoULs41wQf1LL/mYvwAMUoui/Vv5C09HMX4cu+3yWnmTGKay+bhyr2d0kMyVCMtFy15+iXmZbpCgMupXcvKcuyiVozd7M7G8JBRvbxwRCBQuP5z22jNlQGXmWuYHwLetqjqw245UN5w2/X6794jM45In2crJLWOeK+6XKLprZKxc6Qc3NGRlsCSK7ELlZPUGx6boXN2ccOfmskvJeAT9emlz58wDTSJy43U48vKGkvPjEMUrCmqDGShTmzn4McxTVe1iGLQ08cP3Q5G1XvqnD4O4iJPDE4N4W/rxQ9rG9fQVjG6i+xPr/XRqBYg1aOE7YAQr5Gtp6Hrsyf+2Qf8NA2tla1evl767x5+KlYBs+P1/oalI9f4LutgQyfYi3Rl3h6Amyr7slVy6EQqZeyxxVveNoAi7f27rWT4AOEn/s9N22OZFGNRi2zSB1UUDE4VXb+d3vN3Zn6wiKKj3wWQmyCCFYg63GKmVz06ZaCIg7dN1s3A3z5ebP7Jko2W5kAcJVBf0RllSbFLIS9QQBS4W8YgxXttfy68X5H5fRDh8GcnAMA/Ldhll5FsgHTx96lgByhGbssPCMDzp2wX2zM7tAjRJhcrp5LzqjjudTlHTAyZaBirB5PtzdPXIPYMoNCLpD1X7NN2srdG0IerW5V3V2ZI8nvQTDlmFRKGY4+qdL4JeyHJUcPRjfkOS2HhxZZ6Fdz1kPOkS6ruXGcGa0q5J+/c+xev8CgPEAUcE4VgYMVBla8w5gZIdYboYXyvUF9PLcjNgp5OvQ3S9rixRGOvQn5sa0bgL732OsoPFe51AcLgz9UCXrdGHkJk9hg6gd8koSX8IJG0n7plTLL1PbOF1rAQEk9Dsu1uvkvR+a2tZFPbfPtyCVZeQfRTMThjkwfQXlFVdepHgxytD+WE4FN+W8elIdjAcH3T+lYEHYCH9cXFiPzK/Uy8AJvs7/8nEilKhocqvpIO3K56ufs1EJGTgaloMjLLRXRoPyi/o5DTZ/MY+j2r5Fo3B3LN4Xv7tS0RJ+LAXOguxjC8kW8gYkdQsQB0CdXxNPTiWRfZ8r20fOBmb85CXybyLK+cB2eS3rF1bMVMZaBBKyl2TIGE2S3GMeONRLjXW+WH35NYKC9pBszfUyorjlc5Q25udMPLuSwJdlhLi4eS2MTeOhdb9rAw2rLr91QHxgFeSXukTlWXQmBCXSchNjyEQ2Yo0KJ2kk2WaQUyIeH5U09/V44vwg8n6erGqQ5q7SXbHbrh8jDrYQnFpHryAZBc9sLvTdpsmuXJR5olFiAJP6eXkaFXacUN2NLM/G0UG+llCtFpo8Sw25CmNeZ7hYXR2Lvuetp5yo43QL4cq6ufsLsRUZNcp05NTtpYy1VVFX6SBn8BUJKFXznV39/XjB0QOWPWbRouqVbHFGDQT2qYN8MrIZro1X8j+qp/+FtbqrTUFxZIJ314Ow/3fHsQ1pk1tIS/5AJSRMqbw5b78ytae7Riitkl9DntfiP9tcZMEs+MVSoh194XqO1AThmJzl5aXi/u9WwAh5ybNJfeDtqmrhxw1N2x7dIA2iRHWrMp8U2dv5nZ1HU9MduBtZPWDsxMWqwksLXYRb3qZlojm7ilAIcA9uBnqMbQSh7SPJ/eQS5786N8UaLEBzw6f0cfrhJHRxNFBRLMX78whLdSq07T2ghuHg+r+cTvDqXWf4hR2ei4YTQhtN2sO/215VgDnKPbG+GZegtclvwfHi6vvOzDeF+SPvfyjfEJ4WiKJzS9NsJjURN26gMhkcYTfNMPa6qoRep3KhlGbAZPbzVKg6YSfJR73k2HZ02w/BhN5/CbrBsLR6X9yJwrTflWMVFmryJny8f2YEShuEZELlKduGdTVPKnsgNmOrepqtIIkg+1Bu0CUF3RouqGQ0sbu0HaNossVsTa6uS9CaxAT2/ijchM2FtUmo4nTOQVPyTQmLmAgoEfrYPADEMx/bRfojfwK682wBQPBpiXqHyEOSRsk7idueyPQvby/p2I9uLwAQOFYv4TIQN0WYquY62bekkZDEhFmqAs6EnTbdj1yGlXvXLhJKbsDa8mGHadccgxZi4Wlqf4/R55Xv5Qr1dj+lfpIiJi9WGe+wc549F0LhmMFNDFNzxbi7qLzwB1rpUSueNfV/5JlejpeGlTtDuxsHRhLKtqDezrGpYrLsEofnxOY11vrKLlvcSxcnIETQO4KMadcU9/oTvMDmohNJm5SI+Psswz//ZTy5JYDiQV+1NUYF5yPE4hP5kRSYgr8dddNqKHJoUvJKnlDqe4wlikT6tiICnrZnRinI1xEwVaNaHh2u+X+Z+DHP4za//V/aoQECYGxjboGG1oc9ZS9T4/kbB4qYgnGx1Qo8xZpaYllMxy25YLGyqQUWTntzC/lTpYLyXP+iLW5dEmtVMXeBvK6JppziPYk47MyLwzi7Nr6yB2ttefbZTsAKo/LzxcwKBJXmc3Ivm/BWnj6a3jsLE4S/58roHfeQcbBw0s01Wj7fRHsxhF6wS0WeocFVZPA9uVUFzGheMfUtXP2zzSJLaC6allf/62Z/H59V993P9KUTXe75TwolU3ckSI4n3Ye/lcbGnwzqBJ6WvRcX9bO+SSJUbkmK3ph85Ti323O8ImhBy0IBFpJcfbIPHBZudLPcR8ejCsFd7/iNPwy2Kjp3SFCrGrCIi6ybLQksLsh1NSS+sVrPaTwzXn6lr9h1Xg8CaLlYSrj5RORNurroJl5pYA/6WNYZ7ORZwqlh1ib4B6BTV7bQUJPw8ECNqiltsg8hw41rL/fp1zLaS7npsWXlkkbAhyAoophgu9hI8D0JAmnkfGlV5c38wcy/PHAD5EsHXbvcQnWiKEFuBM6oh2JDPJ8FNaihMqSjJiJUgbCPxNiD6KsSZOQ7Yu13dbkX8wqn2VWLvjRjHISexoPH+ccV8j6gcKzEBi3zjPt2u29/1a8ssKVgOg3y8VJzu1g/8XH3mWsHbrNdZbc6tK9ajt7Zl6iNXZ9BawPJpaPPNX4wC2SXwOWqpSDtlxhjHpMfF6mJlu5VBTQBGyxjYy2z1GdV/YD4RLLE4Nf9TgbfnzhFpiR8ih6/NOcZ19/BTh0c4nKYQsUJaDyvoqTwwqNQMwBhFoRZ/S/rNsu/DGtXujSBmpVFW/h9HdvYFzqf0QLq1itsXbU2HU1UrfwwQYhjYy6tP4DobC5bPhezE9hRyoGz4GoNllsVJXS5xnYW5o4TMUSzsZyqjlfTLY1tnDjUIDF/gBfz4SXk/eEZRS4YkRxYqKw8K87yOsEjPqIWRyC1fQ9mpCjdOome/7dqgZhPtRP0sRSo3nHFr/LlHSK9iBpUpK0mTmiiVmiEi7108WanYGi1VJr0OXKOZHHJz5LATUuynOTDNHQku3+e7INJzGoko828asL65+i7NbE31CNoCZw9LTaNSu9m3tfjGvZ3fOH85CH2kYshbW5aoYiiQROWebULbhSqKVZx6P+s4B92jByk4l5VDiMlqUxOaKjLxR6QYub4R3SNLoe4z5dRPqlZbz4UB9AonX0r+X4WctWkhH1xj2suVAQ3HKE0fAlBUf1mKnLStHTxRgwLc0NG4BvdTZxCzXt7D+0qJSVOX5WfUowOoD89PkIhGgOMni3D1dplBM8hIihDOcMgeg83P0ZFukmbSnw/EG9UfYGlx/9jJu1yzU5o0aBLOihj09aaNrcohpTDoIC/GQ1Aj4zDKDWyrYh7T9yj2PmTpOm9lPlh0+oG1vIaExwUeV+8A4N3I3Fjp+871y+GiZt72SG6RYJAL3zciJPeI2xPWqdWJGWobISk8QF7uhtUgnkp2Mnd4PC6+Luee24jrwEK5w5dyu0we9mkFTrTpVM6vhJ2q41eH0P1hl8p+i35TVMj9ilPXRB701zXKOl4VCTMF5Bj0zU0jDL4pZeyldpofFS2Pn6Pkqcr3uEWedXFdjTt4jaFex8j+kErkbufqhRVHXnADKJNTIGfAVi8axvphsJuOTRelPVchskXUGxrQFlf5hvoIsnnqZY2Eh/Ai5pugbNPiGyjdlCMrPnyeuXQnpvuqJJ4vGoKxeqISvFYeaA/EcDSfatPA/+ZoiFe+Q7RiUv001idNQ8eHoEmlfoJlPhagytaHjnde7n6mvIbtZrQ73lix5CqZvkRJi8nhVTMZtTpECYEGXO0aIFLBe3O2z7I2AONin02pdU2a/eL2h3pANfuTRfNuKFOa95ksrVakW+s3TVtkQ/cienua9IMMjOgievKLkuvSZrihpTu31A6yjHpMSSm8hfoxerkSWgDXZt9b7+k3gNnJT2jEoovflQNx9mCbxx1Qr7VMRFAG/U8Ki8bsBmiZWnB8guSGusRlqRQK1Tp/vZGhPsvil1gXsqxPhrjPhpEbb/gwgUDyfqOzgpZzWE0usaPSMQL4DwlkirIEUNLkHqOJIQLtW/UrYCUpnETdP6ywHavaeLNbO6lskPFLbzkdAz/+1AGK1rV7iC120i6OghLHGAEDeYNWIAdGbkfdVNQ+46ggInBnF81U/b25T7bdiTPIVMYHHIMT4iKdhS4Bn6l8qN74jUJpmu7tuE5O69txls2hvWNBfBVaJ9FhS1/jrObVBYAntPmkHfhHNQ9ETCm1KEkxGIhsb0cMP3py5KH0/TPxh9S18tql6XWqBed7294Jcnu3ag8KDpnj2iMc+Oy1wWLPsYWH6gqbZmMm85fsnt8/LG0uCcqT5lflnMJRgINenb1SPrEaYzd37m3Df+UeWWGPqbqJ3VNWZot9rHM7061bCHhjgB51u7ulO3BJj1M+/wMAgF1pjY30ZEaQ+w34iXFozjEiv5yTyv0JUNSj8U/6ImOg7iunpzt/V6ayAJd/knY5QGo+vbgAvedFggqzsTxEeVgMF7Lb38/AdGFnjWLaYmBAE9J1a4r2GEZwWc7Go/IVuYIHYq4NhykVyKxK3jsQMaFMqnZdYnOxFDUb9Xh8y5G2cpN9P4nWo84rGcaeO4oS8kjgqN6NQHwQfxtPwp8QCGGbJB4X4R8KEXAoTeTl0L1Fdq25i75zHdZUAQ+OvsN3fAMzGC3GBQQ1Vm6JGOvgq3h8S5wEhCzYZUBWyZBp+B6SXRBh7Yp3EeoeA/VQDGASpcTvFVR4kqpvO/tHIBP+tegjvx5oNVfWqU83RbMkK3fgc4Ww3VOJdb1sNItXMHvEX3Y2QQZlr15OFV6or27o7Nk5iw/+G8bdueGhZ/Q1JpQoZqc4IwzE3HaWbOLN2D30oFuCr82PgoQdwUpTM3IfXg791f//wFi86OY+h+9dv7kpP9pWlkmmYU3n5dOZwDKXBdl5OytaQLmOZPn2cST3B71tC/gVhOZ+w2nUcGaxxEjSXbswcCBWPDEgf+B/W3Y3p7rC5k5exiyCFq4SK8A8kJQesNVmBzIeqYGsMI26r9BGfbkDhchfa/0pZhmrXWpMwkdSXttVLwK1VpYoWq/AsimZYWHPLv0gsExdtJtLM/AltZFikEw2Ec2ZN0ofT6utnVhuGfWWzD4ABoYzYLT1hvQR+ao5wbu6Zzw5D2mTal0lyCtu1Xr3KOE/oBUsBPWRU+6S/6XwkWyO4pB5hOmhdHDAO7w5ZHCo5vo78hBI3VgomPWd7bvteEVx07oqLcye8a1IG5LqjbOH6etxzfXhDGaYWfxcNzRaf7cLHlm2XFl4R+X4M2esxBeVuQ2ANz8VyPgQwWJ66QoThHJyr5xmOYz+PAia5QeJJw9Z+d2RRYBr/5AgfH3+UIwY5ZejgYU0M74jJzg8P7PiANTbkJscAdc1B2DC/7zXUPYx/jK3XslYqILAJc/tHaSVjVagCN3HGotHDih5MIgxn+f1D8GVmSv1QIp7n9XnUlOiVFNoKgNebEy+2eikUf6fGbOsr7cGxs5Jrp9x1Sv7/lMdLOqm2pTnoosP+NzJkiX6BmYfvKHno4ti27nbCeA435iBHbMwiHB1JncXv3/HN3Yf80HPvAkcE/EDPwu1sRlSJnisZZcIprQ6qghiI9/JDYKa01kmpVU76mPjoAVAwZFO5Vq+I8oMmAXuMqi98GnOVBOspAzwkDk6C0xTduSI+Zf7DA2nQ1ND1HM+tUs6PJcHiS4NpF2sOLZPj/HELq0w1+7m7v0OzNUuGwzpgYOHx4PiALBhs16D0TtWao0JPybqNxe4RLArjsosiUyC2EV9VfblAq/gbPJrKKKEJczxU/YN2EAU3ffud2qohN+a5FVwh1Xxq32JSgFzOcJGzCh+yyed706mz+f142cTcr7vPmxowTrWiL4rT8n9BcDin70pUvjox6LaEaNsLtEi/PBKWxXv9i/PzqDZ6wwiCfihidGXlVwuTVxTo4fmLxtfMDuKRE5CytRjNmLEXZqm97uPqvdprKsH9M61AEpzsLBPX2/J7Lm2Y6aeP1ibUzmVbccScXINP9ghTLKft9M+kJ07xEx5k2kjKIvX56mL/C3DoODVnKi1YcbLM024SgHqPc89Ll+NW2vyRT0tU1okVn5iNEN1bQa+i/DrDLbEy6tciWed+JAD2JnoqDHIdd/dNk7QULMaXwKOzdsnSYannpQCEG0W6Kg+TqwAA8SBHED7DAKdcPQ3z0wY0zfZ5t8LbeWTL/JiyEmM/ubFSUg3yTHxdUZAXzsCzppHfbuLGjxdt9PQHXVslmemK45tnmwxCcQZLNGjy4VK4LjQWdOrwvhq74OCgcxt7WuehhyeOIWXTXqGKq+FGv6iXPsTt/5IXBasUAdDxFg0ARjH4GuLD/Qt1d627IHasE/MwO/FhDHEyJWo5wK3IedyYM71mRCx6xyC8wB0GZSOKk23T8IPcfPa3jN1Jz0qWszFQXa/xA/6IrTtih0cxamVk88aIe8JJ8gZwTqCXCXaDHqiYWHHV/9I2wKplzkKBeOB8e/iDdlH6XigcRUtyGLfldBkyFUcYr2jRtZRxkwJBpPb/J8szLMlkKt1Yl5xjtVF/4EWhdpYv2scPJffNIKVGULAILpJncTp2D29QvpVtSSno32D/f8QQGU1NCS2zQOIUzC2X2hsnv07vQtyIKoTfWupHRtBUPmxpouixIqORok9qoLv/3kzYy+hOZElz9rKa9IwPWso0OYYHxk9Ev0OLDI6IklTMcfODyfr2jOBM+nbuLxfYcZRdMggmzbMWrQLROWLXrko6yXcjmODZib7CTGUj6xZG4BZR6Wj8ucLMrzHgbV2Za9ybHU5OilQXaKtMr2yx9RpPkgzYAFNVO8+rppjtNY9kw6wKEDtNeioIRFG7G1W4QGDGZZbh+ue5XP9jhIoChTnP3S3iGuTdA7OdlUEq+RQQTLXVKktAjLADUgu1gocV+6ur6RH85stRhg+P6V/4w963vDwQHpyPr/eZpIuT/Y6ypL+XiJZr3bZ9sKid5tYCqxOObR/CanDpb/VmH0PQfr0mEF0oGkQyiRMVr3r96+Vgpj18BSsdEGA4YilVtb3TXLK/BJjxdL8GBTYxALtE5xgEkgEZv+EjsOIww+b/nsfrHfJKjXO+F64p6rZLQ3wkqBGDUt5C9FZp46huIx3tGjt6tHJh3TY1e7Xg36XPdfMSXxkuxL982MQ2dknXJoNtM5+K3XLBtjszuEhWxi23GLgE9awf3ZF4mbF+9Z6AOJUEbh8UHKd/TLYnGwJ39WbPkWVY35n9JNriJ1fvIaVJYmpVsj9uLZ/HZfPXBb9PCkl/qUPtuMTxqoaN+p+5B0I5rcHlN/4tYHxs6qNjDrXs6mw4QhPI6V+XbovVrYEjb48TtJm/ahb7ykGVfFIkKvvOzZ3WW+ZQ66J3g4rmbNH8yve30/xAsG8a3lzL3vNMvqAjZZjHWcursUV09zTZVWxKeCZdbYvY9ygEjyY1nYV8UVWy7WIqXRXHur7VIyp73D0Rn/w/vvutOnRRNdamuEUsgpiH5Xu/vg+LpUGoeZLcjyY+kS4souaS1GxWGjQTFBeEDoEACHoA4gw+lz5yaUsDikXCLVWYvwbqH1lTS+mZaobj2WdjWrGoIaYtAkZn3Gn0xlWqGxXnNTlaiti1KBEhZHJzplc4PqAfGjgYF/f4P8Xq2nU+obiCtqwRK54ci9y4u1+G0O/YvuelfVlwkFAV9r/OMH8GdTnzy6v5sJ1XpjAh5DdaiSDxIZKOHqmE3u50hgIux4HE1UH7LA+/qoRuBWketRnxpaiVjV4pTqL/UaeKxNJ+7Ltln2a156sr+ZrW5hCgyxK/eCGm+fPgGpDn5KS2Jsyp4sNGhh5b5PRwapaRJ4CC10DKmC7ku5H5Qp6Kler6y/8NbBFrnn8H++udvnBoP/sdmMHYZGqU7pQxk0qPbuyg0C0l8EHeoOcxA7pwtxfawn6UCjE5/qcc8sY498ml1fYbJmqmCQ12Q0hq2ZoFvfkIh2wlxFR+UWDCWNkVpouKEZjnx4OzlgjxyPDUY1h7Ea5AermiTrH5fD/UgkL1hBrTC7ZR3m2DU9ny2zzkKwPbTSBYVO8pP9tIRUBe004NAFSupM2zR6PuTtcZvqm0Oo0+qY6gkFBtU+qC//WUl0t4tmpe+QVqjgyHoa6PJibDYPT5OkwU2Uwu7D9xulEBvFHgxaaRPwDGT6g7MO8rMgvNhiMkeIvrp7kciVrLXQcEN32S5iQj0mGUqlIGv9p46b73I7okJMYWgwsDj6Ylt3zrBy7o1N8JrXjXu6BFFOiS45BD2LYfS8s/DVAU4rDCnwYmHC5/4OKBGf18kyc+gFbZi6zz2cH6ejBfQYpcHND/+6Fj8xniFMXpWSYhUD+tk4VXYsyOOm2ISWYlZph4pte8fJrQ8FEZelI0MrpP6T8hxlsVKFAyxesVagiwMoFGitb9HOxyAa/coBX0gVXEAFL93JrryYdpDysqGUcCONTdbCgRaU2xb0icW9OtXjJ/GOThVTF+4f+i5I+v+Ob+Ul4uqV85DP2iEr8tmIfpe4Ef/8Ces3NXZCw1+nSUbk9A6jkOXQBFaThXWCk3umorymKORjZrlm0CdLyEj9gJ1ph3r9rdOsO3R58Ym4P3oUw454d2gROletfmeDa6sTnDZpVrzksLx88GN3iknxl505s4fRHfwzux+Yh7BrY8EUnh0/+W5s9vu9oG+ndKIQ09BpQIIIJi9bG28K3rhgJFFGvog3e0I72t0Tk2FzGHKAwFk+9NY8ZhLexYcbijSW9+Fmc+U8zVBanWekQUDFLQTbLJ3G4TYnVVPdN7RspGDubdZ6bJC+tChLSr+Yj8zUAOgQ5kP/hGi12RasTIIz+VACNIlFa3Hq3zpfq3oGP3tEk6KRKOqnq/YwFVapxvagD0tbEG85KbNkHz0E6+f9VuSiUvUWShkOeUjIzG4NTAcGk4JL8wJVf1gYxqjN5JOmjluRdihqOLtGjv3E/jNMjnEWlinAGL0KZ4B78/I6Iw6R+blxpyiF2eZqZP97b9WH0OGkU7jJWfOMEC3P+6XhouTJ504dYmQnA3YbpDul+PKeG7UjZWVVGD/M6v++mvq52cKHdkLb4DShoPb6YCQZgnkEhjJ4hr3Z610SkzZIdrJiOl/7kC2dN2lhDnzBMg4xGQrIIjV5UW+BZDBaHB57LR2e597k/3pblb+oyGYZCVxUXGufGe+G1YgzVBv6YqrZNkgZtuhVw5SF+lXZZLr5fQV2XJ/vrkLQ8ha0Ovnq/RTJbVKL4teYV6CjgiXqxqjUTJYr6oRAzoqZKYUuRDWLREdEXElstr/gGmXbXyVuB80al01YL6XiVGrPmq5LqmQ2KN3sS8Zcu341epPbnanXSYlIg4FOJ8iJaAUwGzWP+iL1MyTEA9mNSU6UTUhJjRcgPZE/LvfxedzRigFtlL4V54OEftNVCODp3bg8IdOx/T7lc+y7yD6MVR2uYcdJdr0M1kJhsqMoFpAGep1n3xUvTRFuw0k3yYw85tNGhqdBkOraFUK+1X3PiSMLx2ofjW7AiWaaQtGcqs08cxigb/N/mgfoM3iOnj+Q3YQiNhBJLtDwBPqm60RBMuxNRDLgeGFDIjOouIaHcyRXlSNIBvnDKrFLrcagKWNmr1fxFgKj+BsjQFnE+6phwcoOrBzXtdoIwZxpnuROb+M1Z6KH2SDWD18dfy9U6Z1COEtbRS9Ot3lP+OcrtQ3s8PAvpVJlv+g/lasTXaDJ9i1tU2X7DkLROE8fsZQdnO+dVRvonW2VrpV2LalfbVrsVhMgQ0ujRz4kd2ne0tjDPVFzhBl+lrQR+Mog6zH2ErrNYqmWzKOlJ3wBMWfT7hZyuDT4hNJ0nmKLJEq1+XBdkCuSyR7ciEzZP8/XfyMnXFqHNlrMfoD94x+976wtmQGbuBUs3qcHWM4xKYA8FzrT5InUz0A0Z2pwdQ3n8AxLGo/e1GDAQ35dihtDVQwmvE6oBCQQd/vx4BpNA3ndz/lES0e8MoqIMRvEiAs0Juv8nkhcCucROZapkCB71bRCzgoJmM23CPtHZeGVlRRR0jY74OYZT9HIm3QTopvfUDcWlrd+KJTGzJnIVTJFHImeNHTCW3ueGPO+v7h6Sbj2K883lT3jsXKayMJRhcQDSexmycXtY/dVlmDcK8KLeh1gbvYJodO8fewBdbm4yNignOa9QPtIZSzXbqDt2TL1pUb1HYL7B8oyHnSwjzOCLZl0sy+SqL47CgfcnBM2XwlWtLABeRRvmiiKwqEICA9z4BdFBl7TFwZ2iPpB5s1Iso=" />
+
+
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ctl00_RadScriptManager1_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3a92dc34f5-462f-43bd-99ec-66234f705cd1%3aea597d4b%3bTelerik.Web.UI%2c+Version%3d2020.1.114.45%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen-US%3a40a36146-6362-49db-b4b5-57ab81f34dac%3ae330518b%3a16e4e7cd%3af7645509%3a24ee1bba%3a33715776%3a88144a7a%3a1e771326%3a8e6f0d33%3a1f3a7489%3aed16cbdc%3af46195d3%3ab2e06756%3a92fe8ea0%3afa31b949%3a4877f69a%3ac128760b%3a19620875%3a874f8ea2%3a490a9d4e%3abd8f85e4%3a6a6d718d%3a2003d0b8%3ac8618e41%3a1a73651d%3a333f8d94%3a58366029" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="854B7638" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="cLQ983MDAXi+zD7f/U7nlMiay6jmfTmly5dq3UfKV3PVysh9+zRsU1OtoZXRagpjNze6hw7UTBjQstmWqdV7chXT6Tx/bmvMOH/yrDkN81DU+GadJhzQ0MaDY7ywKL7WY/sE9ab4pTI0XMTlqdzrB7ceNZsLG7FlXwcm3QgMGjMK6ECnlgV9ehFYThpB9Sj2IqMErn9ll8XlgLFwzPURzdzYYvs9VtW8lcf4vbrYQsgmTXUue/rJGoLCSOTzbXPT" />
+        
+        <div id="ctl00_divBody">
+            <div id="ctl00_divMyAccountOut" style="position: absolute; right: 5px; top: 5px;">
+                <a id="ctl00_hypSignIn" href="SignIn.aspx?ReturnUrl=TXlBY2NvdW50LmFzcHg%3d"><font face="Tahoma" color="White" size="2">Sign In</font></a>
+            </div>
+            
+            <div id="ctl00_divTop"><table cellspacing="0" cellpadding="0" width="100%" border="0" style="background: url(https://oakland.legistar.com/Images/OAKL/background-header-BG.png);">
+    <tbody>
+        <tr>
+            <td>
+            <img alt="" src="/Images/OAKL/background-header.png" style="width: 970px; height: 131px;" />
+            </td>
+        </tr>
+    </tbody>
+</table></div>
+            
+            <div id="ctl00_divTabs">
+                <div id="ctl00_tabTop" class="RadTabStrip RadTabStrip_Sunset RadTabStripTop_Sunset RadTabStripTop"><font face="Tahoma" size="2">
+	<!-- 2020.1.114.45 --><div class="rtsLevel rtsLevel1">
+		<ul class="rtsUL"><li class="rtsLI rtsFirst"><a class="rtsLink rtsBefore" href="http://www2.oaklandnet.com/"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">City Home</span></span></span></a></li><li class="rtsLI"><a class="rtsLink rtsSelected" href="Legislation.aspx"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Legislation</span></span></span></a></li><li class="rtsLI"><a class="rtsLink rtsAfter" href="Calendar.aspx"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Calendar</span></span></span></a></li><li class="rtsLI rtsLast"><a class="rtsLink" href="MainBody.aspx"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">City Council</span></span></span></a></li></ul>
+	</div><input id="ctl00_tabTop_ClientState" name="ctl00_tabTop_ClientState" type="hidden" />
+</font></div>
+            </div>
+            <div id="ctl00_divLeft">
+            </div>
+            <div id="ctl00_divHeader" style="width: 100%; height: 28px">
+                <div id="divHeaderLeft">
+                    
+                </div>
+                <div id="divHeaderRight" style="float: right; height: 16px">
+                    <!-- AddThis Button BEGIN -->
+                    <span id="ctl00_SpanShare">
+                        <a class="addthis_button_facebook"><img src="Images/share_facebook.gif" height="16" alt="Share to Facebook" /></a>
+                        <a class="addthis_button_twitter"><img src="Images/share_twitter.gif" height="16" alt="Share to Twitter" /></a>
+                        <a class="addthis_button_more"><img src="Images/share_more.gif" height="16" alt="Bookmark and Share" /></a>
+                    </span>
+                    <!-- AddThis Button END -->
+                    <input type="image" name="ctl00$ButtonRSS" id="ctl00_ButtonRSS" title="City of Oakland - File: 18-1641" alt="RSS button" src="Images/RSS.gif" alt="City of Oakland - File: 18-1641" onclick="window.open(&#39;https://oakland.legistar.com/Feed.ashx?M=LD&amp;ID=3911996&amp;GUID=03C32050-AD9A-4E1D-945D-0CB3226C5CB6&#39;); return false;WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ButtonRSS&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" border="0" />
+                    
+                </div>
+            </div>
+            <div id="ctl00_Div1">
+                <div id="ctl00_Div2">
+                    <div id="ctl00_divMiddle">
+                        
+    <head>
+        <link href="Skins/Tacoma/Scheduler.Tacoma.css" rel="Stylesheet" type="text/css" />
+        <link href="Skins/Tacoma/TabStrip.Tacoma.css" rel="Stylesheet" type="text/css" />
+        <link href="Skins/Tacoma/Grid.Tacoma.css" rel="Stylesheet" type="text/css" />
+        <link href="Skins/Tacoma/Calendar.Tacoma.css" rel="Stylesheet" type="text/css" />
+        <link href="Skins/Tacoma/Menu.Tacoma.css" rel="Stylesheet" type="text/css" />
+        <link href="Skins/Tacoma/General.Tacoma.css" rel="Stylesheet" type="text/css" />
+        <script type="text/JavaScript" src="GridFilter.js"></script> 
+    </head>
+    <div id="ctl00_ContentPlaceHolder1_RadAjaxManager1SU">
+	<span id="ctl00_ContentPlaceHolder1_RadAjaxManager1" style="display:none;"></span>
+</div>
+    <div id="ctl00_ContentPlaceHolder1_RadAjaxLoadingPanel1" style="display:none;height:75px;width:75px;">
+	
+        <img alt="Loading..." src='/WebResource.axd?d=GlPPRoa3q1QmM_XFN5If4CxfN3S-cgQzypn6SHyBpvWh8wyZ5Cm_qsz7Vq9HLR86gm168gofzhhVQd4idaTUzMIuCpSQXhldpsbKcc80H-BmChfdAao3Pq3facHVJk-jMrBOnhhYV9yZqT-SvW4bfQ2&amp;t=637227651210573583'
+            style="border: 0px;" />
+    
+</div>
+    <div id="ctl00_ContentPlaceHolder1_RadWindowManager1" style="display:none;z-index:100000;"><font face="Tahoma" size="2">
+	<div id="ctl00_ContentPlaceHolder1_RadWindow2" style="display:none;">
+		<div id="ctl00_ContentPlaceHolder1_RadWindow2_C" style="display:none;">
+
+		</div><input id="ctl00_ContentPlaceHolder1_RadWindow2_ClientState" name="ctl00_ContentPlaceHolder1_RadWindow2_ClientState" type="hidden" />
+	</div><div id="ctl00_ContentPlaceHolder1_RadWindowManager1_alerttemplate" style="display:none;">
+		<div class="rwDialogPopup radalert">			
+			<div class="rwDialogText">
+			{1}				
+			</div>
+			
+			<div>
+				<a  onclick="$find('{0}').close(true);"
+				class="rwPopupButton" href="javascript:void(0);">
+					<span class="rwOuterSpan">
+						<span class="rwInnerSpan">##LOC[OK]##</span>
+					</span>
+				</a>				
+			</div>
+		</div>
+		</div><div id="ctl00_ContentPlaceHolder1_RadWindowManager1_prompttemplate" style="display:none;">
+		 <div class="rwDialogPopup radprompt">			
+			    <div class="rwDialogText">
+			    {1}				
+			    </div>		
+			    <div>
+				    <script type="text/javascript">
+				    function RadWindowprompt_detectenter(id, ev, input)
+				    {							
+					    if (!ev) ev = window.event;                
+					    if (ev.keyCode == 13)
+					    {															        
+					        var but = input.parentNode.parentNode.getElementsByTagName("A")[0];					        
+					        if (but)
+						    {							
+							    if (but.click) but.click();
+							    else if (but.onclick)
+							    {
+							        but.focus(); var click = but.onclick; but.onclick = null; if (click) click.call(but);							 
+							    }
+						    }
+					       return false;
+					    } 
+					    else return true;
+				    }	 
+				    </script>
+				    <input title="Enter Value" onkeydown="return RadWindowprompt_detectenter('{0}', event, this);" type="text"  class="rwDialogInput" value="{2}" />
+			    </div>
+			    <div>
+				    <a onclick="$find('{0}').close(this.parentNode.parentNode.getElementsByTagName('input')[0].value);"				
+					    class="rwPopupButton" href="javascript:void(0);" ><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				    <a onclick="$find('{0}').close(null);" class="rwPopupButton"  href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			    </div>
+		    </div>				       
+		</div><div id="ctl00_ContentPlaceHolder1_RadWindowManager1_confirmtemplate" style="display:none;">
+		<div class="rwDialogPopup radconfirm">			
+			<div class="rwDialogText">
+			{1}				
+			</div>						
+			<div>
+				<a onclick="$find('{0}').close(true);"  class="rwPopupButton" href="javascript:void(0);" ><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				<a onclick="$find('{0}').close(false);" class="rwPopupButton"  href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			</div>
+		</div>		
+		</div><input id="ctl00_ContentPlaceHolder1_RadWindowManager1_ClientState" name="ctl00_ContentPlaceHolder1_RadWindowManager1_ClientState" type="hidden" />
+</font></div>
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: white">
+        <tr>
+            <td>
+                <div class="RadAjaxPanel" id="ctl00_ContentPlaceHolder1_ctl00_ContentPlaceHolder1_tblMessagePanel">
+
+</div>
+                <div id="ctl00_ContentPlaceHolder1_divTabs">
+                    <div id="ctl00_ContentPlaceHolder1_tabTop" class="RadTabStrip RadTabStrip_Sunset RadTabStripTop_Sunset RadTabStripTop"><font face="Tahoma" size="2">
+	<div class="rtsLevel rtsLevel1">
+		<ul class="rtsUL"><li class="rtsLI rtsFirst"><a class="rtsLink rtsSelected" href="#"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Details</span></span></span></a></li><li class="rtsLI rtsLast"><a class="rtsLink rtsAfter" href="#"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Reports</span></span></span></a></li></ul>
+	</div><input id="ctl00_ContentPlaceHolder1_tabTop_ClientState" name="ctl00_ContentPlaceHolder1_tabTop_ClientState" type="hidden" />
+</font></div>
+                </div>
+                <div id="ctl00_ContentPlaceHolder1_MultiPageTop" class="RadMultiPage RadMultiPage_Default">
+	<div id="ctl00_ContentPlaceHolder1_pageDetails" class="rmpView">
+		
+                        <table border="0" cellpadding="2" cellspacing="2" width="100%">
+                            <tr>
+                                <td style="width: 150px">
+                                    <span id="ctl00_ContentPlaceHolder1_lblFile"><font face="Tahoma" color="Navy" size="2">File #:</font></span>
+                                </td>
+                                <td style="width: 250px">
+                                    <span id="ctl00_ContentPlaceHolder1_lblFile2"><font face="Tahoma" color="Black" size="2">18-1641</font></span>
+                                    &nbsp;&nbsp;
+                                    <span id="ctl00_ContentPlaceHolder1_lblVersion"><font face="Tahoma" color="Navy" size="2">Version:</font></span>
+                                    
+                                    <span id="ctl00_ContentPlaceHolder1_lblVersion2"><font face="Tahoma" color="Black" size="2">1</font></span>
+                                </td>
+                                <td style="width: 125px">
+                                    <span id="ctl00_ContentPlaceHolder1_lblName"><font face="Tahoma" color="Navy" size="2">Name:</font></span>
+                                </td>
+                                <td>
+                                    <span id="ctl00_ContentPlaceHolder1_lblName2"><font face="Tahoma" color="Black" size="2"></font></span>
+                                </td>
+                            </tr>
+                        </table>
+                        <table border="0" cellpadding="2" cellspacing="2" width="100%">
+                            <tr>
+                                <td style="width: 150px">
+                                    <span id="ctl00_ContentPlaceHolder1_lblType"><font face="Tahoma" color="Navy" size="2">Type:</font></span>
+                                </td>
+                                <td style="width: 250px">
+                                    <span id="ctl00_ContentPlaceHolder1_lblType2"><font face="Tahoma" color="Black" size="2">Report and Recommendation</font></span>
+                                </td>
+                                <td style="width: 125px">
+                                    <span id="ctl00_ContentPlaceHolder1_lblStatus"><font face="Tahoma" color="Navy" size="2">Status:</font></span>
+                                    
+                                </td>
+                                <td>
+                                    <span id="ctl00_ContentPlaceHolder1_lblStatus2" title="Items In Council - Scheduled from Committees, rescheduled in Council, Scheduled BY Council"><font face="Tahoma" color="Black" size="2">In Council</font></span>
+                                    
+                                </td>
+                            </tr>
+                        </table>
+                        <table border="0" cellpadding="2" cellspacing="2" width="100%">
+                            <tr>
+                                <td style="width: 150px">
+                                    <span id="ctl00_ContentPlaceHolder1_lblIntroduced"><font face="Tahoma" color="Navy" size="2">File created:</font></span>
+                                </td>
+                                <td style="width: 250px">
+                                    <span id="ctl00_ContentPlaceHolder1_lblIntroduced2"><font face="Tahoma" color="Black" size="2">4/3/2019</font></span>
+                                </td>
+                                <td style="width: 125px">
+                                    <span id="ctl00_ContentPlaceHolder1_lblInControlOf"><font face="Tahoma" color="Navy" size="2">In control:</font></span>
+                                </td>
+                                <td>
+                                    <a id="ctl00_ContentPlaceHolder1_hypInControlOf2"><font face="Tahoma" color="Black" size="2">* Concurrent Meeting of the Oakland Redevelopment Successor Agency and the City Council</font></a>
+                                    
+                                </td>
+                            </tr>
+                        </table>
+                        <table border="0" cellpadding="2" cellspacing="2" width="100%">
+                            <tr>
+                                <td style="width: 150px">
+                                    <span id="ctl00_ContentPlaceHolder1_lblOnAgenda"><font face="Tahoma" color="Navy" size="2">On agenda:</font></span>
+                                </td>
+                                <td style="width: 250px">
+                                    <span id="ctl00_ContentPlaceHolder1_lblOnAgenda2"><font face="Tahoma" color="Black" size="2">4/16/2019</font></span>
+                                </td>
+                                <td style="width: 125px">
+                                    <span id="ctl00_ContentPlaceHolder1_lblPassed"><font face="Tahoma" color="Navy" size="2">Final action:</font></span>
+                                </td>
+                                <td>
+                                    <span id="ctl00_ContentPlaceHolder1_lblPassed2"><font face="Tahoma" color="Black" size="2">4/16/2019</font></span>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        
+                        <table id="ctl00_ContentPlaceHolder1_tblTitle" border="0" cellpadding="2" cellspacing="2" width="100%">
+			<tr>
+				<td style="width: 150px">
+                                    <span id="ctl00_ContentPlaceHolder1_lblTitle"><font face="Tahoma" color="Navy" size="2">Title:</font></span>
+                                </td>
+				<td>
+                                    <span id="ctl00_ContentPlaceHolder1_lblTitle2"><font face="Tahoma" color="Black" size="2">Subject:	Children's Initiative of 2018 , Measure AA	
+From:		Office Of The City Attorney		
+Recommendation: Approve A Motion Publicly Directing The City Administrator Not To Collect First Year Measure AA (The Children’s Initiative Of 2018) Taxes; And Restating That Pursuant To Council’s December 14, 2018 Resolution No. 87485 C.M.S. The City Administrator Is Directed To Submit A Validation Ordinance For The Taxes, And The City Attorney Is Directed To File A Validation Action</font></span>
+                                </td>
+			</tr>
+		</table>
+		
+                        
+                        
+                        
+                        
+                        
+                        <table id="ctl00_ContentPlaceHolder1_tblAttachments" border="0" cellpadding="2" cellspacing="2" width="100%">
+			<tr>
+				<td style="width: 150px">
+                                    <span id="ctl00_ContentPlaceHolder1_lblAttachments"><font face="Tahoma" color="Navy" size="2">Attachments:</font></span>
+                                </td>
+				<td>
+                                    <span id="ctl00_ContentPlaceHolder1_lblAttachments2"><font face="Tahoma" color="Black" size="2">1. <a href="View.ashx?M=F&ID=7146492&GUID=9E9ADF75-9745-40AF-BA4B-87A4FF965FF0" style="color: blue;">View Report</a>, 2. <a href="View.ashx?M=F&ID=7161339&GUID=241A5385-9C11-4C2B-86EC-6F604442C2CB" style="color: blue;">View Supplemental Report 4/12/2019</a>, 3. <a href="View.ashx?M=F&ID=7162326&GUID=8A22723C-DA1D-419A-9795-756849B52596" style="color: blue;">View Supplemental Report 4/12/2019</a></font></span>
+                                </td>
+			</tr>
+		</table>
+		
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <div id="ctl00_ContentPlaceHolder1_tabBottom" class="RadTabStrip RadTabStrip_Sunset RadTabStripTop_Sunset RadTabStripTop"><font face="Tahoma" size="2">
+			<div class="rtsLevel rtsLevel1">
+				<ul class="rtsUL"><li class="rtsLI rtsFirst"><a class="rtsLink rtsSelected" href="#"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">History (2)</span></span></span></a></li><li class="rtsLI rtsLast"><a class="rtsLink rtsAfter" href="#"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Text</span></span></span></a></li></ul>
+			</div><input id="ctl00_ContentPlaceHolder1_tabBottom_ClientState" name="ctl00_ContentPlaceHolder1_tabBottom_ClientState" type="hidden" />
+		</font></div>
+                        <div id="ctl00_ContentPlaceHolder1_MultiPageBottom" class="RadMultiPage RadMultiPage_Default">
+			<div id="ctl00_ContentPlaceHolder1_pageHistory" class="rmpView">
+				
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td>
+                                            <div tabindex="0" id="ctl00_ContentPlaceHolder1_menuLegislation" class="RadMenu RadMenu_Sunset" style="z-index:3500;"><font face="Tahoma" size="2">
+					<ul class="rmRootGroup rmHorizontal">
+						<li class="rmItem rmFirst"><a class="rmLink rmRootLink rmDisabled" href="#"><font color="Black"><span class="rmText">2 records</span></font></a></li><li class="rmItem "><a class="rmLink rmRootLink" href="#"><span class="rmText">Group</span></a><div class="rmSlide">
+							<ul class="rmVertical rmGroup rmLevel1">
+								<li class="rmItem rmFirst"><a class="rmLink" href="#"><span class="rmText">Clear sorting</span></a></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Clear grouping</span></a></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Group by Date</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="#"><span class="rmText">Group by Action By</span></a></li>
+							</ul>
+						</div></li><li class="rmItem rmLast"><a class="rmLink rmRootLink" href="#"><span class="rmText">Export</span></a><div class="rmSlide">
+							<ul class="rmVertical rmGroup rmLevel1">
+								<li class="rmItem rmFirst"><a class="rmLink" href="#"><span class="rmText">Export to Excel</span></a></li><li class="rmItem "><a class="rmLink" href="#"><span class="rmText">Export to PDF</span></a></li><li class="rmItem rmLast"><a class="rmLink" href="#"><span class="rmText">Export to Word</span></a></li>
+							</ul>
+						</div></li>
+					</ul><input id="ctl00_ContentPlaceHolder1_menuLegislation_ClientState" name="ctl00_ContentPlaceHolder1_menuLegislation_ClientState" type="hidden" />
+				</font></div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td>
+                                            <div class="RadAjaxPanel" id="ctl00_ContentPlaceHolder1_ctl00_ContentPlaceHolder1_gridLegislationPanel">
+					<div id="ctl00_ContentPlaceHolder1_gridLegislation" class="RadGrid RadGrid_Sunset" style="font-family:Tahoma;font-size:10pt;width:99.5%;">
+
+					<table class="rgMasterTable" border="0" id="ctl00_ContentPlaceHolder1_gridLegislation_ctl00" frame="void" width="100%" style="table-layout:auto;empty-cells:show;">
+						<colgroup>
+		<col  />
+		<col  />
+		<col  />
+		<col  />
+		<col  />
+		<col style="width:50px" />
+		<col style="width:50px" />
+		<col  />
+	</colgroup>
+<thead>
+							<tr>
+								<th scope="col" class="rgHeader rgSorted" valign="middle" abbr="100px" nowrap="nowrap" style="text-align:left;vertical-align:middle;"><a onclick="Telerik.Web.UI.Grid.Sort($find(&#39;ctl00_ContentPlaceHolder1_gridLegislation_ctl00&#39;), &#39;HistoryDate&#39;); return false;" title="Click here to sort" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gridLegislation$ctl00$ctl02$ctl01$ctl00&#39;,&#39;&#39;)">Date</a>&nbsp;<input type="button" name="ctl00$ContentPlaceHolder1$gridLegislation$ctl00$ctl02$ctl01$ctl01" value=" " onclick="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gridLegislation$ctl00$ctl02$ctl01$ctl01&#39;,&#39;&#39;)" title="Sorted desc" class="rgSortDesc" /></th><th scope="col" class="rgHeader" valign="middle" abbr="50px" nowrap="nowrap" style="text-align:left;vertical-align:middle;"><a onclick="Telerik.Web.UI.Grid.Sort($find(&#39;ctl00_ContentPlaceHolder1_gridLegislation_ctl00&#39;), &#39;HistoryVersion&#39;); return false;" title="Click here to sort" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gridLegislation$ctl00$ctl02$ctl01$ctl02&#39;,&#39;&#39;)">Ver.</a></th><th scope="col" class="rgHeader" valign="middle" abbr="200px" nowrap="nowrap" style="text-align:left;vertical-align:middle;"><a onclick="Telerik.Web.UI.Grid.Sort($find(&#39;ctl00_ContentPlaceHolder1_gridLegislation_ctl00&#39;), &#39;BodyName&#39;); return false;" title="Click here to sort" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gridLegislation$ctl00$ctl02$ctl01$ctl05&#39;,&#39;&#39;)">Action&nbsp;By</a></th><th scope="col" class="rgHeader" valign="middle" nowrap="nowrap" style="text-align:left;vertical-align:middle;"><a onclick="Telerik.Web.UI.Grid.Sort($find(&#39;ctl00_ContentPlaceHolder1_gridLegislation_ctl00&#39;), &#39;HistoryAction&#39;); return false;" title="Click here to sort" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gridLegislation$ctl00$ctl02$ctl01$ctl06&#39;,&#39;&#39;)">Action</a></th><th scope="col" class="rgHeader" valign="middle" abbr="50px" nowrap="nowrap" style="text-align:left;vertical-align:middle;"><a onclick="Telerik.Web.UI.Grid.Sort($find(&#39;ctl00_ContentPlaceHolder1_gridLegislation_ctl00&#39;), &#39;HistoryPassedFlag&#39;); return false;" title="Click here to sort" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gridLegislation$ctl00$ctl02$ctl01$ctl08&#39;,&#39;&#39;)">Result</a></th><th scope="col" class="rgHeader" valign="middle" abbr="0px" nowrap="nowrap" style="text-align:left;vertical-align:middle;">Action&nbsp;Details</th><th scope="col" class="rgHeader" valign="middle" abbr="0px" nowrap="nowrap" style="text-align:left;vertical-align:middle;">Meeting&nbsp;Details</th><th scope="col" class="rgHeader" valign="middle" abbr="0px" nowrap="nowrap" style="text-align:left;vertical-align:middle;">Video</th>
+							</tr>
+						</thead><tbody>
+						<tr class="rgRow" valign="top" id="ctl00_ContentPlaceHolder1_gridLegislation_ctl00__0">
+							<td class="rgSorted"><font face="Tahoma" size="2">4/16/2019</font></td><td><font face="Tahoma" size="2">1</font></td><td nowrap="nowrap"><font face="Tahoma" size="2">
+                                                                <a id="ctl00_ContentPlaceHolder1_gridLegislation_ctl00_ctl04_hypBody"><font face="Tahoma" color="Black" size="2">Special Concurrent Meeting of the Oakland Redevelopment Successor Agency/City Council</font></a>
+                                                            </font></td><td><font face="Tahoma" size="2">Accepted</font></td><td><font face="Tahoma" size="2">Pass</font></td><td><font face="Tahoma" size="2">
+                                                                <a id="ctl00_ContentPlaceHolder1_gridLegislation_ctl00_ctl04_hypDetails" onclick="radopen(&#39;HistoryDetail.aspx?ID=17530834&amp;GUID=B5AA07D9-7777-4BBA-B018-506ABC999015&#39;, &#39;HistoryDetail&#39;);return false;" href="#"><font face="Tahoma" color="Blue" size="2">Action&nbsp;details</font></a>
+                                                            </font></td><td><font face="Tahoma" size="2">
+                                                                <a id="ctl00_ContentPlaceHolder1_gridLegislation_ctl00_ctl04_hypMeetingDetail" href="MeetingDetail.aspx?ID=687934&amp;GUID=FA538578-31C0-4B16-8775-2C69D7D779CB&amp;Options=&amp;Search="><font face="Tahoma" color="Blue" size="2">Meeting&nbsp;details</font></a>
+                                                            </font></td><td><font face="Tahoma" size="2">
+                                                                <span style="white-space: nowrap;">
+                                                                    
+                                                                    
+                                                                    <a id="ctl00_ContentPlaceHolder1_gridLegislation_ctl00_ctl04_hypVideo" class="historyVideoIndexNotAvailableLink"><font face="Tahoma" color="Gray" size="2">Not&nbsp;available</font></a>
+                                                                </span>
+                                                            </font></td>
+						</tr><tr class="rgAltRow" valign="top" id="ctl00_ContentPlaceHolder1_gridLegislation_ctl00__1">
+							<td class="rgSorted"><font face="Tahoma" size="2">4/4/2019</font></td><td><font face="Tahoma" size="2">1</font></td><td nowrap="nowrap"><font face="Tahoma" size="2">
+                                                                <a id="ctl00_ContentPlaceHolder1_gridLegislation_ctl00_ctl06_hypBody"><font face="Tahoma" color="Black" size="2">*Rules & Legislation Committee</font></a>
+                                                            </font></td><td><font face="Tahoma" size="2">Scheduled</font></td><td><font face="Tahoma" size="2">&nbsp;</font></td><td><font face="Tahoma" size="2">
+                                                                <a id="ctl00_ContentPlaceHolder1_gridLegislation_ctl00_ctl06_hypDetails" onclick="radopen(&#39;HistoryDetail.aspx?ID=17536596&amp;GUID=1FD66F53-3020-40E2-826B-277313BE21D0&#39;, &#39;HistoryDetail&#39;);return false;" href="#"><font face="Tahoma" color="Blue" size="2">Action&nbsp;details</font></a>
+                                                            </font></td><td><font face="Tahoma" size="2">
+                                                                <a id="ctl00_ContentPlaceHolder1_gridLegislation_ctl00_ctl06_hypMeetingDetail" href="MeetingDetail.aspx?ID=685304&amp;GUID=7289BAC3-1790-4A36-B4F6-5AF1F1B446F4&amp;Options=&amp;Search="><font face="Tahoma" color="Blue" size="2">Meeting&nbsp;details</font></a>
+                                                            </font></td><td><font face="Tahoma" size="2">
+                                                                <span style="white-space: nowrap;">
+                                                                    
+                                                                    
+                                                                    <a id="ctl00_ContentPlaceHolder1_gridLegislation_ctl00_ctl06_hypVideo" class="historyVideoIndexNotAvailableLink"><font face="Tahoma" color="Gray" size="2">Not&nbsp;available</font></a>
+                                                                </span>
+                                                            </font></td>
+						</tr>
+						</tbody>
+
+					</table><div id="ctl00_ContentPlaceHolder1_gridLegislation_SharedCalendarContainer" style="display:none;">
+
+					</div><input id="ctl00_ContentPlaceHolder1_gridLegislation_ClientState" name="ctl00_ContentPlaceHolder1_gridLegislation_ClientState" type="hidden" />	</div>
+
+				</div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            
+			</div><div id="ctl00_ContentPlaceHolder1_pageText" class="rmpView rmpHidden">
+				
+                                <div id="ctl00_ContentPlaceHolder1_divText" style="margin: 10px;"><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<div>
+<div>
+<p style="margin:0pt 0pt 0pt 0pt;line-height:normal;"><span style="font-family:'Times New Roman';font-size:12pt;color:#000000;;">Title</span></p>
+<p style="margin:0pt 0pt 0pt 0pt;line-height:normal;"><span style="font-family:Arial;font-size:12pt;color:#000000;;">Subject:</span><span style="font-family:'Times New Roman';font-size:7pt;color:#000000;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:'Times New Roman';font-size:12pt;color:#000000;;">Children's Initiative of 2018 , Measure AA</span><span style="font-family:'Times New Roman';font-size:7pt;color:#000000;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p style="margin:0pt 0pt 0pt 0pt;line-height:normal;"><span style="font-family:Arial;font-size:12pt;color:#000000;;">From:</span><span style="font-family:'Times New Roman';font-size:7pt;color:#000000;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:'Times New Roman';font-size:7pt;color:#000000;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Arial;font-size:12pt;color:#000000;;">Office Of The City Attorney</span><span style="font-family:'Times New Roman';font-size:7pt;color:#000000;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:'Times New Roman';font-size:7pt;color:#000000;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p style="margin:0pt 0pt 0pt 0pt;line-height:normal;"><span style="font-family:Arial;font-size:12pt;color:#000000;;">Recommendation: Approve </span><span style="font-family:Arial;font-size:12pt;color:#000000;font-weight:bold;">A Motion Publicly Directing The City Administrator Not To Collect First Year Measure AA (The Children&rsquo;s Initiative Of 2018) Taxes; And Restating That Pursuant To Council&rsquo;s December 14, 2018 Resolution No. 87485 C.M.S. The City Administrator Is Directed To Submit A Validation Ordinance For The Taxes, And The City Attorney Is Directed To File A Validation Action</span></p>
+<p style="margin:0pt 0pt 0pt 0pt;line-height:normal;"><span style="font-family:Arial;font-size:12pt;color:#000000;;">&nbsp;</span></p>
+<p style="margin:0pt 0pt 0pt 0pt;line-height:normal;"><span style="font-family:'Times New Roman';font-size:12pt;color:#000000;;">&nbsp;</span></p>
+<p style="margin:0pt 0pt 0pt 0pt;line-height:normal;"><span style="font-family:'Times New Roman';font-size:12pt;color:#000000;;">&nbsp;</span></p>
+</div>
+</div></div>
+                            
+			</div><div id="ctl00_ContentPlaceHolder1_pagePublicComments" class="rmpView rmpHidden">
+				
+                                
+                            
+			</div><div id="ctl00_ContentPlaceHolder1_pagePrivateComments" class="rmpView rmpHidden">
+				
+                                <div class="RadAjaxPanel" id="ctl00_ContentPlaceHolder1_ctl00_ContentPlaceHolder1_ucPrivateCommentsPanel">
+
+				</div>
+                            
+			</div><input id="ctl00_ContentPlaceHolder1_MultiPageBottom_ClientState" name="ctl00_ContentPlaceHolder1_MultiPageBottom_ClientState" type="hidden" />
+		</div>
+                    
+	</div><div id="ctl00_ContentPlaceHolder1_pageReports" class="rmpView rmpHidden">
+		
+                        <table border="0" cellpadding="4" cellspacing="4" width="100%">
+                            <tr>
+                                <td id="ctl00_ContentPlaceHolder1_tdText">
+                                    <a id="ctl00_ContentPlaceHolder1_hypText" href="ViewReport.ashx?M=R&amp;N=Text&amp;GID=134&amp;ID=3493640&amp;GUID=26124962-D88D-43D2-BC20-7043A06C601F&amp;Title=Legislation+Text"><font face="Tahoma" color="Blue" size="2">Legislation Text</font></a>
+                                </td>
+		
+                            </tr>
+                            <tr>
+                                <td id="ctl00_ContentPlaceHolder1_tdMaster">
+                                    <a id="ctl00_ContentPlaceHolder1_hypMaster" href="ViewReport.ashx?M=R&amp;N=Master&amp;GID=134&amp;ID=3911996&amp;GUID=03C32050-AD9A-4E1D-945D-0CB3226C5CB6&amp;Title=Legislation+Details"><font face="Tahoma" color="Blue" size="2">Legislation Details</font></a>
+                                </td>
+		
+                            </tr>
+                            <tr>
+                                <td id="ctl00_ContentPlaceHolder1_tdMasterWithText">
+                                    <a id="ctl00_ContentPlaceHolder1_hypMasterWithText" href="ViewReport.ashx?M=R&amp;N=Master&amp;GID=134&amp;ID=3911996&amp;GUID=03C32050-AD9A-4E1D-945D-0CB3226C5CB6&amp;Extra=WithText&amp;Title=Legislation+Details+(With+Text)"><font face="Tahoma" color="Blue" size="2">Legislation Details (With Text)</font></a>
+                                </td>
+		
+                            </tr>
+                            <tr>
+                                
+                            </tr>
+                            <tr>
+                                
+                            </tr>
+                            <tr>
+                                
+                            </tr>
+                        </table>
+                        <span id="ctl00_ContentPlaceHolder1_lblReport"><font face="Tahoma" color="Navy" size="2"></font></span>
+                    
+	</div><input id="ctl00_ContentPlaceHolder1_MultiPageTop_ClientState" name="ctl00_ContentPlaceHolder1_MultiPageTop_ClientState" type="hidden" />
+</div>
+            </td>
+        </tr>
+    </table>
+
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <div id="ctl00_divRight">
+            </div>
+            <div id="ctl00_divBottom">
+                
+            </div>
+        </div>
+        
+        
+    
+
+<script type="text/javascript">
+//<![CDATA[
+window.__TsmHiddenField = $get('ctl00_RadScriptManager1_TSM');Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadTabStrip, {"_selectedIndex":1,"_skin":"Sunset","causesValidation":false,"clickSelectedTab":true,"clientStateFieldID":"ctl00_tabTop_ClientState","selectedIndexes":["1"],"tabData":[{"value":"Home"},{"value":"Legislation"},{"value":"Calendar"},{"value":"MainBody"}]}, null, null, $get("ctl00_tabTop"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAjaxManager, {"_updatePanels":"","ajaxSettings":[{InitControlID : "ctl00_ContentPlaceHolder1_gridLegislation",UpdatedControls : [{ControlID:"ctl00_ContentPlaceHolder1_gridLegislation",PanelID:""}]},{InitControlID : "ctl00_ContentPlaceHolder1_ucPrivateComments",UpdatedControls : [{ControlID:"ctl00_ContentPlaceHolder1_ucPrivateComments",PanelID:""},{ControlID:"ctl00_ContentPlaceHolder1_tblMessage",PanelID:""}]}],"clientEvents":{OnRequestStart:"",OnResponseEnd:""},"defaultLoadingPanelID":"ctl00_ContentPlaceHolder1_RadAjaxLoadingPanel1","enableAJAX":true,"enableHistory":false,"links":[],"styles":[],"uniqueID":"ctl00$ContentPlaceHolder1$RadAjaxManager1","updatePanelsRenderMode":0}, null, null, $get("ctl00_ContentPlaceHolder1_RadAjaxManager1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAjaxLoadingPanel, {"initialDelayTime":0,"isSticky":false,"minDisplayTime":0,"skin":"","uniqueID":"ctl00$ContentPlaceHolder1$RadAjaxLoadingPanel1","zIndex":90000}, null, null, $get("ctl00_ContentPlaceHolder1_RadAjaxLoadingPanel1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"behaviors":44,"clientStateFieldID":"ctl00_ContentPlaceHolder1_RadWindow2_ClientState","formID":"aspnetForm","height":"540px","iconUrl":"","initialBehaviors":8,"minimizeIconUrl":"","name":"RadWindow2","skin":"Sunset","visibleStatusbar":false,"width":"720px"}, null, null, $get("ctl00_ContentPlaceHolder1_RadWindow2"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindowManager, {"behaviors":44,"clientStateFieldID":"ctl00_ContentPlaceHolder1_RadWindowManager1_ClientState","destroyOnClose":true,"formID":"aspnetForm","height":"600px","iconUrl":"","initialBehaviors":8,"minimizeIconUrl":"","name":"RadWindowManager1","skin":"Sunset","visibleStatusbar":false,"width":"800px","windowControls":"['ctl00_ContentPlaceHolder1_RadWindow2']"}, null, {"child":"ctl00_ContentPlaceHolder1_RadWindow2"}, $get("ctl00_ContentPlaceHolder1_RadWindowManager1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadTabStrip, {"_autoPostBack":true,"_postBackOnClick":true,"_postBackReference":"__doPostBack(\u0027ctl00$ContentPlaceHolder1$tabTop\u0027,\u0027arguments\u0027)","_selectedIndex":0,"_skin":"Sunset","causesValidation":false,"clientStateFieldID":"ctl00_ContentPlaceHolder1_tabTop_ClientState","multiPageID":"ctl00_ContentPlaceHolder1_MultiPageTop","selectedIndexes":["0"],"tabData":[{"value":"Details","pageViewID":"ctl00_ContentPlaceHolder1_pageDetails"},{"value":"Reports","pageViewID":"ctl00_ContentPlaceHolder1_pageReports"}]}, null, null, $get("ctl00_ContentPlaceHolder1_tabTop"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadTabStrip, {"_autoPostBack":true,"_postBackOnClick":true,"_postBackReference":"WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(\u0027ctl00$ContentPlaceHolder1$tabBottom\u0027, \u0027arguments\u0027, true, \u0027\u0027, \u0027\u0027, false, true))","_selectedIndex":0,"_skin":"Sunset","clientStateFieldID":"ctl00_ContentPlaceHolder1_tabBottom_ClientState","multiPageID":"ctl00_ContentPlaceHolder1_MultiPageBottom","selectedIndexes":["0"],"tabData":[{"value":"History","pageViewID":"ctl00_ContentPlaceHolder1_pageHistory"},{"value":"Text","pageViewID":"ctl00_ContentPlaceHolder1_pageText"}]}, null, null, $get("ctl00_ContentPlaceHolder1_tabBottom"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadMenu, {"_childListElementCssClass":null,"_postBackReference":"WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(\u0027ctl00$ContentPlaceHolder1$menuLegislation\u0027, \u0027arguments\u0027, true, \u0027\u0027, \u0027\u0027, false, true))","_skin":"Sunset","attributes":{},"clientStateFieldID":"ctl00_ContentPlaceHolder1_menuLegislation_ClientState","collapseAnimation":"{\"type\":12,\"duration\":200}","collapseDelay":50,"defaultGroupSettings":"{\"flow\":0,\"expandDirection\":0}","expandAnimation":"{\"duration\":450}","expandDelay":50,"itemData":[{"groupSettings":{"flow":0,"expandDirection":0},"postBack":0,"value":"Results","enabled":false},{"groupSettings":{"flow":0,"expandDirection":0},"items":[{"groupSettings":{"flow":0,"expandDirection":0},"value":"ClearSort"},{"groupSettings":{"flow":0,"expandDirection":0},"value":"Clear"},{"groupSettings":{"flow":0,"expandDirection":0},"value":"HistoryDate"},{"groupSettings":{"flow":0,"expandDirection":0},"value":"BodyName"}],"postBack":0,"value":"Group"},{"groupSettings":{"flow":0,"expandDirection":0},"items":[{"groupSettings":{"flow":0,"expandDirection":0},"value":"Excel"},{"groupSettings":{"flow":0,"expandDirection":0},"value":"PDF"},{"groupSettings":{"flow":0,"expandDirection":0},"value":"Word"}],"postBack":0,"value":"Export"}]}, null, null, $get("ctl00_ContentPlaceHolder1_menuLegislation"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadGrid, {"ClientID":"ctl00_ContentPlaceHolder1_gridLegislation","ClientSettings":{"AllowAutoScrollOnDragDrop":true,"AllowDragToGroup":true,"AllowKeyboardNavigation":true,"ShouldCreateRows":true,"ReorderColumnsOnClient":true,"DataBinding":{},"Selecting":{"CellSelectionMode":0,"AllowRowSelect":true,"EnableDragToSelectRows":true,"UseClientSelectColumnOnly":true},"Scrolling":{},"Resizing":{"AllowColumnResize":true},"ClientMessages":{"DragToGroupOrReorder":""},"KeyboardNavigationSettings":{"AllowActiveRowCycle":true,"EnableKeyboardShortcuts":true,"FocusKey":89,"InitInsertKey":73,"RebindKey":82,"ExitEditInsertModeKey":27,"UpdateInsertItemKey":13,"DeleteActiveRow":127,"ExpandDetailTableKey":39,"CollapseDetailTableKey":37,"MoveDownKey":40,"MoveUpKey":38,"SaveChangesKey":85,"CancelChangesKey":81},"Animation":{},"Virtualization":{}},"Skin":"Sunset","SortingSettings":{"SortToolTip":"Click here to sort","SortedAscToolTip":"Sorted asc","SortedDescToolTip":"Sorted desc","SortedBackColor":{"R":0,"G":0,"B":0,"A":0,"IsKnownColor":false,"IsEmpty":true,"IsNamedColor":false,"IsSystemColor":false,"Name":"0"},"EnableSkinSortStyles":true,"ViewState":{}},"UniqueID":"ctl00$ContentPlaceHolder1$gridLegislation","ValidationSettings":{"EnableValidation":true,"ValidationGroup":"","CommandsToValidate":["PerformInsert","Update"]},"_activeRowIndex":"","_controlToFocus":"","_currentPageIndex":0,"_defaultDateTimeFormat":"M/d/yyyy h:mm:ss tt","_editIndexes":"[]","_embeddedSkin":true,"_freezeText":"Freeze","_gridTableViewsData":"[{\"ClientID\":\"ctl00_ContentPlaceHolder1_gridLegislation_ctl00\",\"UniqueID\":\"ctl00$ContentPlaceHolder1$gridLegislation$ctl00\",\"PageSize\":100,\"PageCount\":1,\"EditMode\":\"EditForms\",\"AllowPaging\":true,\"CurrentPageIndex\":0,\"VirtualItemCount\":0,\"AllowMultiColumnSorting\":false,\"AllowNaturalSort\":false,\"AllowFilteringByColumn\":false,\"PageButtonCount\":10,\"HasDetailTables\":false,\"HasMultiHeaders\":false,\"CheckListWebServicePath\":\"\",\"GroupLoadMode\":\"Server\",\"PagerAlwaysVisible\":false,\"IsItemInserted\":false,\"clientDataKeyNames\":[],\"hasDetailItemTemplate\":false,\"_dataBindTemplates\":false,\"_selectedItemStyle\":\"\",\"_selectedItemStyleClass\":\"rgSelectedRow\",\"_renderActiveItemStyle\":\"\",\"_renderActiveItemStyleClass\":\"rgActiveRow\",\"_columnsData\":[{\"UniqueName\":\"HistoryDate\",\"Resizable\":true,\"Reorderable\":true,\"Selectable\":true,\"Groupable\":true,\"ColumnType\":\"GridBoundColumn\",\"ColumnGroupName\":\"\",\"Editable\":true,\"SortExpression\":\"HistoryDate\",\"DataTypeName\":\"System.DateTime\",\"DataField\":\"HistoryDate\",\"DataFormatString\":\"{0:M/d/yyyy}\",\"Display\":true},{\"UniqueName\":\"HistoryVersion\",\"Resizable\":true,\"Reorderable\":true,\"Selectable\":true,\"Groupable\":true,\"ColumnType\":\"GridBoundColumn\",\"ColumnGroupName\":\"\",\"Editable\":true,\"SortExpression\":\"HistoryVersion\",\"DataTypeName\":\"System.String\",\"DataField\":\"HistoryVersion\",\"Display\":true},{\"UniqueName\":\"BodyName\",\"Resizable\":true,\"Reorderable\":true,\"Selectable\":true,\"Groupable\":true,\"ColumnType\":\"GridTemplateColumn\",\"ColumnGroupName\":\"\",\"Editable\":false,\"SortExpression\":\"BodyName\",\"DataTypeName\":\"System.String\",\"DataField\":\"\",\"Display\":true},{\"UniqueName\":\"HistoryAction\",\"Resizable\":true,\"Reorderable\":true,\"Selectable\":true,\"Groupable\":true,\"ColumnType\":\"GridBoundColumn\",\"ColumnGroupName\":\"\",\"Editable\":true,\"SortExpression\":\"HistoryAction\",\"DataTypeName\":\"System.String\",\"DataField\":\"HistoryAction\",\"Display\":true},{\"UniqueName\":\"HistoryPassedFlag\",\"Resizable\":true,\"Reorderable\":true,\"Selectable\":true,\"Groupable\":true,\"ColumnType\":\"GridBoundColumn\",\"ColumnGroupName\":\"\",\"Editable\":true,\"SortExpression\":\"HistoryPassedFlag\",\"DataTypeName\":\"System.String\",\"DataField\":\"HistoryPassedFlag\",\"Display\":true},{\"UniqueName\":\"HistoryDetails\",\"Resizable\":true,\"Reorderable\":true,\"Selectable\":true,\"Groupable\":false,\"ColumnType\":\"GridTemplateColumn\",\"ColumnGroupName\":\"\",\"Editable\":false,\"DataTypeName\":\"System.String\",\"DataField\":\"\",\"Display\":true},{\"UniqueName\":\"MeetingDetails\",\"Resizable\":true,\"Reorderable\":true,\"Selectable\":true,\"Groupable\":false,\"ColumnType\":\"GridTemplateColumn\",\"ColumnGroupName\":\"\",\"Editable\":false,\"DataTypeName\":\"System.String\",\"DataField\":\"\",\"Display\":true},{\"UniqueName\":\"Video\",\"Resizable\":true,\"Reorderable\":true,\"Selectable\":true,\"Groupable\":false,\"ColumnType\":\"GridTemplateColumn\",\"ColumnGroupName\":\"\",\"Editable\":false,\"DataTypeName\":\"System.String\",\"DataField\":\"\",\"Display\":true}]}]","_masterClientID":"ctl00_ContentPlaceHolder1_gridLegislation_ctl00","_shouldFocusOnPage":false,"_unfreezeText":"Unfreeze","allowMultiRowSelection":true,"clientStateFieldID":"ctl00_ContentPlaceHolder1_gridLegislation_ClientState","expandItems":{},"renderMode":1}, {"filterMenuShowing":gridFilterMenuShowing}, null, $get("ctl00_ContentPlaceHolder1_gridLegislation"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadMultiPage, {"clientStateFieldID":"ctl00_ContentPlaceHolder1_MultiPageBottom_ClientState","pageViewData":[{"id":"ctl00_ContentPlaceHolder1_pageHistory"},{"id":"ctl00_ContentPlaceHolder1_pageText"},{"id":"ctl00_ContentPlaceHolder1_pagePublicComments"},{"id":"ctl00_ContentPlaceHolder1_pagePrivateComments"}],"selectedIndex":0}, null, null, $get("ctl00_ContentPlaceHolder1_MultiPageBottom"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadMultiPage, {"clientStateFieldID":"ctl00_ContentPlaceHolder1_MultiPageTop_ClientState","pageViewData":[{"id":"ctl00_ContentPlaceHolder1_pageDetails"},{"id":"ctl00_ContentPlaceHolder1_pageReports"}],"selectedIndex":0}, null, null, $get("ctl00_ContentPlaceHolder1_MultiPageTop"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>
