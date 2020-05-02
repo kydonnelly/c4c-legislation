@@ -78,7 +78,9 @@ class VoteParser:
         keywords = ['Aye', 'No', 'Absent', 'Abstained', 'Excused']
         votes = []
         for i in range(0, len(votes_entries), 2):
-            full_name = votes_entries[i].upper()
+            # Normalize and uppercase names to match DB, eg Guillén to GUILLEN
+            # Could use unidecode library if there are more cases needed
+            full_name = votes_entries[i].replace('é', 'e').upper()
             vote = votes_entries[i+1]
             matching_legislator = None
             vote_type = -1
